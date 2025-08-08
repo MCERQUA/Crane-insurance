@@ -1,0 +1,47 @@
+---
+import '../styles/global.css';
+import GlassNavbar from '../components/ui/GlassNavbar.tsx';
+import FloatingContactButton from '../components/ui/FloatingContactButton.tsx';
+import GlassFilter from '../components/ui/GlassFilter.tsx';
+import Footer from '../components/sections/Footer.astro';
+
+export interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = 'Professional crane insurance coverage from industry specialists. Get comprehensive liability, equipment, and riggers coverage with OSHA-compliant solutions.' } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <title>{title} | Heavy Crane Insurance</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  </head>
+  <body class="bg-concrete-gray text-steel-black">
+    <!-- Glass Filter SVG -->
+    <GlassFilter client:load />
+    
+    <!-- Navigation -->
+    <GlassNavbar client:load />
+    
+    <!-- Main Content -->
+    <main class="min-h-screen">
+      <slot />
+    </main>
+    
+    <!-- Footer -->
+    <Footer />
+    
+    <!-- Floating Contact Button -->
+    <FloatingContactButton client:load />
+  </body>
+</html>

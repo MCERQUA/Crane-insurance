@@ -1,0 +1,289 @@
+---
+import GlassCard from '../ui/GlassCard.tsx';
+import GlassButton from '../ui/GlassButton.tsx';
+---
+
+<section class="section-padding bg-concrete-gray" id="contact-form">
+  <div class="container-padding max-w-5xl mx-auto">
+    <div class="text-center mb-12">
+      <h2 class="heading-lg text-steel-black mb-4">
+        Get Your Free Crane Insurance Quote
+      </h2>
+      <p class="body-text text-iron-gray">
+        Connect with our specialists for customized coverage solutions
+      </p>
+    </div>
+    
+    <GlassCard client:visible variant="white">
+      <form 
+        name="crane-insurance-quote" 
+        method="POST" 
+        data-netlify="true"
+        netlify-honeypot="bot-field"
+        class="space-y-6"
+      >
+        <input type="hidden" name="form-name" value="crane-insurance-quote" />
+        <p class="hidden">
+          <label>
+            Don't fill this out if you're human: <input name="bot-field" />
+          </label>
+        </p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="space-y-2">
+            <label for="company" class="block text-sm font-semibold text-steel-black">
+              Company Name
+            </label>
+            <input
+              type="text"
+              id="company"
+              name="company"
+              required
+              class="form-input"
+              placeholder="Your company name"
+            />
+          </div>
+          
+          <div class="space-y-2">
+            <label for="contact-name" class="block text-sm font-semibold text-steel-black">
+              Contact Name
+            </label>
+            <input
+              type="text"
+              id="contact-name"
+              name="contact-name"
+              required
+              class="form-input"
+              placeholder="Your name"
+            />
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="space-y-2">
+            <label for="email" class="block text-sm font-semibold text-steel-black">
+              Email Address
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              class="form-input"
+              placeholder="your@company.com"
+            />
+          </div>
+          
+          <div class="space-y-2">
+            <label for="phone" class="block text-sm font-semibold text-steel-black">
+              Phone Number
+            </label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              required
+              class="form-input"
+              placeholder="(555) 123-4567"
+            />
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="space-y-2">
+            <label for="business-type" class="block text-sm font-semibold text-steel-black">
+              Business Type
+            </label>
+            <select
+              id="business-type"
+              name="business-type"
+              required
+              class="form-input"
+            >
+              <option value="">Select business type</option>
+              <option value="crane-operator">Crane Operator</option>
+              <option value="crane-rental">Crane Rental Company</option>
+              <option value="construction-company">Construction Company</option>
+              <option value="rigging-company">Rigging Company</option>
+              <option value="industrial-contractor">Industrial Contractor</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="space-y-2">
+            <label for="operating-states" class="block text-sm font-semibold text-steel-black">
+              Primary Operating State(s)
+            </label>
+            <input
+              type="text"
+              id="operating-states"
+              name="operating-states"
+              required
+              class="form-input"
+              placeholder="CA, TX, FL, etc."
+            />
+          </div>
+        </div>
+
+        <div class="space-y-2">
+          <label for="crane-types" class="block text-sm font-semibold text-steel-black">
+            Types of Cranes/Equipment
+          </label>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-2">
+            <label class="flex items-center">
+              <input type="checkbox" name="crane-types" value="mobile-cranes" class="mr-2 text-construction-yellow">
+              <span class="text-sm text-steel-black">Mobile Cranes</span>
+            </label>
+            <label class="flex items-center">
+              <input type="checkbox" name="crane-types" value="tower-cranes" class="mr-2 text-construction-yellow">
+              <span class="text-sm text-steel-black">Tower Cranes</span>
+            </label>
+            <label class="flex items-center">
+              <input type="checkbox" name="crane-types" value="crawler-cranes" class="mr-2 text-construction-yellow">
+              <span class="text-sm text-steel-black">Crawler Cranes</span>
+            </label>
+            <label class="flex items-center">
+              <input type="checkbox" name="crane-types" value="overhead-cranes" class="mr-2 text-construction-yellow">
+              <span class="text-sm text-steel-black">Overhead Cranes</span>
+            </label>
+            <label class="flex items-center">
+              <input type="checkbox" name="crane-types" value="all-terrain" class="mr-2 text-construction-yellow">
+              <span class="text-sm text-steel-black">All-Terrain</span>
+            </label>
+            <label class="flex items-center">
+              <input type="checkbox" name="crane-types" value="rough-terrain" class="mr-2 text-construction-yellow">
+              <span class="text-sm text-steel-black">Rough Terrain</span>
+            </label>
+            <label class="flex items-center">
+              <input type="checkbox" name="crane-types" value="carry-deck" class="mr-2 text-construction-yellow">
+              <span class="text-sm text-steel-black">Carry Deck</span>
+            </label>
+            <label class="flex items-center">
+              <input type="checkbox" name="crane-types" value="other-equipment" class="mr-2 text-construction-yellow">
+              <span class="text-sm text-steel-black">Other</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="space-y-2">
+            <label for="equipment-value" class="block text-sm font-semibold text-steel-black">
+              Total Equipment Value
+            </label>
+            <select
+              id="equipment-value"
+              name="equipment-value"
+              required
+              class="form-input"
+            >
+              <option value="">Select value range</option>
+              <option value="under-500k">Under $500,000</option>
+              <option value="500k-1m">$500,000 - $1,000,000</option>
+              <option value="1m-5m">$1,000,000 - $5,000,000</option>
+              <option value="5m-10m">$5,000,000 - $10,000,000</option>
+              <option value="over-10m">Over $10,000,000</option>
+            </select>
+          </div>
+
+          <div class="space-y-2">
+            <label for="current-coverage" class="block text-sm font-semibold text-steel-black">
+              Current Insurance Status
+            </label>
+            <select
+              id="current-coverage"
+              name="current-coverage"
+              required
+              class="form-input"
+            >
+              <option value="">Select status</option>
+              <option value="no-coverage">No current coverage</option>
+              <option value="looking-to-switch">Looking to switch carriers</option>
+              <option value="expanding-coverage">Need additional coverage</option>
+              <option value="renewal-coming">Renewal approaching</option>
+              <option value="new-business">New business/equipment</option>
+            </select>
+          </div>
+        </div>
+        
+        <div class="space-y-2">
+          <label for="coverage-needed" class="block text-sm font-semibold text-steel-black">
+            Coverage Types Needed
+          </label>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
+            <label class="flex items-center">
+              <input type="checkbox" name="coverage-needed" value="general-liability" class="mr-2 text-construction-yellow">
+              <span class="text-sm text-steel-black">General Liability</span>
+            </label>
+            <label class="flex items-center">
+              <input type="checkbox" name="coverage-needed" value="riggers-liability" class="mr-2 text-construction-yellow">
+              <span class="text-sm text-steel-black">Riggers Liability</span>
+            </label>
+            <label class="flex items-center">
+              <input type="checkbox" name="coverage-needed" value="equipment-coverage" class="mr-2 text-construction-yellow">
+              <span class="text-sm text-steel-black">Equipment Physical Damage</span>
+            </label>
+            <label class="flex items-center">
+              <input type="checkbox" name="coverage-needed" value="workers-comp" class="mr-2 text-construction-yellow">
+              <span class="text-sm text-steel-black">Workers' Compensation</span>
+            </label>
+            <label class="flex items-center">
+              <input type="checkbox" name="coverage-needed" value="auto-liability" class="mr-2 text-construction-yellow">
+              <span class="text-sm text-steel-black">Auto Liability</span>
+            </label>
+            <label class="flex items-center">
+              <input type="checkbox" name="coverage-needed" value="umbrella" class="mr-2 text-construction-yellow">
+              <span class="text-sm text-steel-black">Umbrella/Excess</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="space-y-2">
+          <label for="additional-info" class="block text-sm font-semibold text-steel-black">
+            Additional Information
+          </label>
+          <textarea
+            id="additional-info"
+            name="additional-info"
+            rows="4"
+            class="form-input resize-none"
+            placeholder="Tell us about your specific needs, projects, or any questions you have..."
+          ></textarea>
+        </div>
+
+        <div class="space-y-4">
+          <label class="flex items-start">
+            <input type="checkbox" name="consent" required class="mr-2 mt-1 text-construction-yellow">
+            <span class="text-sm text-steel-black">
+              I consent to being contacted by phone, email, or text message to discuss my crane insurance needs. 
+              I understand that consent is not required to purchase services.
+            </span>
+          </label>
+        </div>
+        
+        <div class="flex justify-center">
+          <button
+            type="submit"
+            class="px-12 py-4 rounded-full font-bold transition-all duration-300 
+                   bg-construction-yellow text-charcoal-black hover:bg-amber 
+                   shadow-xl hover:shadow-2xl
+                   transform hover:-translate-y-0.5
+                   relative overflow-hidden"
+          >
+            <span class="relative z-10 flex items-center">
+              Get Free Quote
+              <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+              </svg>
+            </span>
+          </button>
+        </div>
+        
+        <div class="text-center mt-4">
+          <p class="text-sm text-iron-gray">
+            Get your customized crane insurance quote within 24 hours • No obligation • Licensed specialists
+          </p>
+        </div>
+      </form>
+    </GlassCard>
+  </div>
+</section>

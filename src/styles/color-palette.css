@@ -1,0 +1,62 @@
+/* Heavy Crane Insurance - Color Palette Reference */
+
+/* Primary Colors */
+:root {
+  /* Backgrounds & Base */
+  --construction-yellow: #FFD700;   /* Main bright yellow */
+  --safety-yellow: #FFEB3B;        /* Lighter yellow, cards */
+  --warning-yellow: #FFC107;       /* Medium yellow, borders */
+  --amber: #FF8F00;                /* Darker yellow accent */
+  
+  /* Text Colors */
+  --steel-black: #1A1A1A;          /* Primary text */
+  --charcoal-black: #000000;       /* High contrast text */
+  --iron-gray: #4A4A4A;            /* Secondary text */
+  
+  /* Accent Colors */
+  --machinery-gray: #757575;       /* CTAs, links, buttons */
+  --concrete-gray: #E0E0E0;        /* Light elements */
+  --steel-gray: #BDBDBD;           /* Section backgrounds */
+  
+  /* Reserved for Special Sections */
+  --dark-steel: #2E2E2E;           /* Use sparingly */
+}
+
+/* Usage Examples */
+
+/* Backgrounds */
+.bg-primary { background-color: var(--concrete-gray); }
+.bg-section { background-color: var(--steel-gray); }
+.bg-card { background-color: var(--safety-yellow); }
+.bg-footer { background-color: var(--charcoal-black); }
+
+/* Text */
+.text-primary { color: var(--steel-black); }
+.text-secondary { color: var(--iron-gray); }
+.text-accent { color: var(--construction-yellow); }
+
+/* Buttons */
+.btn-primary { 
+  background-color: var(--construction-yellow);
+  color: var(--steel-black);
+}
+
+.btn-secondary {
+  background-color: var(--machinery-gray);
+  color: var(--concrete-gray);
+}
+
+/* Borders */
+.border-subtle { border-color: var(--machinery-gray); }
+.border-strong { border-color: var(--dark-steel); }
+
+/* Glass Effects */
+.glass-warm {
+  background: rgba(224, 224, 224, 0.90); /* Concrete gray with opacity */
+  border: 1px solid rgba(117, 117, 117, 0.3); /* Machinery gray with opacity */
+}
+
+/* Shadows */
+.shadow-warm {
+  box-shadow: 0 8px 32px rgba(26, 26, 26, 0.12); /* Steel black shadow */
+}

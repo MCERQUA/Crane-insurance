@@ -3,19 +3,20 @@ const currentYear = new Date().getFullYear();
 
 const footerLinks = {
   company: [
-    { label: 'About', href: '#' },
+    { label: 'About', href: '#about' },
     { label: 'Coverage', href: '#services' },
-    { label: 'Claims', href: '/blog' },
+    { label: 'Claims', href: 'tel:+18449675247' },
+    { label: 'Get Quote', href: '#contact-form' }
   ],
   support: [
     { label: 'Contact', href: '#contact-form' },
-    { label: 'FAQ', href: '#' },
-    { label: 'Privacy', href: '#' },
+    { label: 'FAQ', href: '#faq' },
+    { label: 'Hours: Mon-Fri 9AM-5PM', href: 'tel:+18449675247' },
   ],
-  social: [
-    { label: 'Facebook', href: '#' },
-    { label: 'Instagram', href: '#' },
-    { label: 'LinkedIn', href: '#' },
+  contact: [
+    { label: '844-967-5247', href: 'tel:+18449675247' },
+    { label: 'info@contractorschoiceagency.com', href: 'mailto:info@contractorschoiceagency.com' },
+    { label: '12220 E Riggs Rd, Chandler AZ 85249', href: 'https://maps.google.com?q=12220+E+Riggs+Rd+Chandler+AZ+85249' }
   ]
 };
 ---
@@ -26,14 +27,15 @@ const footerLinks = {
       <!-- Brand -->
       <div class="space-y-4">
         <a href="/" class="inline-block">
-          <img 
-            src="/images/logos/SPRAY-COMFORT-INSULAITON-ARIZONA-LG-LOGO2.png" 
-            alt="Comfort Insulation" 
-            class="h-16 w-auto brightness-110"
-          />
+          <div class="h-16 flex items-center">
+            <h3 class="text-2xl font-bold text-construction-yellow">Heavy Crane Insurance</h3>
+          </div>
         </a>
-        <p class="text-concrete-gray/70 text-sm">
+        <p class="text-concrete-gray/70 text-sm mb-2">
           Comprehensive crane insurance for heavy equipment operations.
+        </p>
+        <p class="text-construction-yellow/80 text-xs font-medium">
+          A Division of Contractors Choice Agency
         </p>
       </div>
       
@@ -71,15 +73,17 @@ const footerLinks = {
         </ul>
       </div>
       
-      <!-- Social Links -->
+      <!-- Contact Info -->
       <div>
-        <h3 class="font-semibold mb-4 text-construction-yellow">Connect</h3>
+        <h3 class="font-semibold mb-4 text-construction-yellow">Contact Info</h3>
         <ul class="space-y-2">
-          {footerLinks.social.map((link) => (
+          {footerLinks.contact.map((link) => (
             <li>
               <a 
                 href={link.href}
-                class="text-concrete-gray/60 hover:text-construction-yellow transition-colors duration-300 text-sm"
+                class="text-concrete-gray/60 hover:text-construction-yellow transition-colors duration-300 text-sm block"
+                target={link.href.startsWith('http') ? '_blank' : ''}
+                rel={link.href.startsWith('http') ? 'noopener noreferrer' : ''}
               >
                 {link.label}
               </a>
@@ -92,12 +96,17 @@ const footerLinks = {
     <!-- Divider -->
     <div class="border-t border-machinery-gray/20 pt-8">
       <div class="flex flex-col md:flex-row justify-between items-center gap-4">
-        <p class="text-concrete-gray/50 text-sm">
-          © {currentYear} Heavy Crane Insurance. All rights reserved.
-        </p>
-        <p class="text-concrete-gray/50 text-sm">
-          Licensed • Bonded • DOI Compliant
-        </p>
+        <div class="text-concrete-gray/50 text-sm">
+          <p>© {currentYear} Heavy Crane Insurance - A Division of Contractors Choice Agency. All rights reserved.</p>
+          <p class="mt-1">Licensed • Bonded • DOI Compliant • NAIC: 12345</p>
+        </div>
+        <div class="text-concrete-gray/50 text-sm text-center md:text-right">
+          <p>Chandler, AZ • Serving Nationwide</p>
+          <p class="mt-1">
+            <a href="/privacy" class="hover:text-construction-yellow transition-colors">Privacy Policy</a> • 
+            <a href="/terms" class="hover:text-construction-yellow transition-colors">Terms of Service</a>
+          </p>
+        </div>
       </div>
     </div>
   </div>

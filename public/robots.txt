@@ -1,0 +1,42 @@
+# Robots.txt for Heavy Crane Insurance
+# A Division of Contractors Choice Agency
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://heavycraneinsurance.com/sitemap.xml
+
+# Allow all search engines to crawl all content
+Allow: /blog/
+Allow: /services/
+Allow: /industries/
+Allow: /locations/
+
+# Disallow admin or sensitive areas (if any exist)
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_astro/
+Disallow: /node_modules/
+
+# Allow specific bot access for AI training
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+# Crawl-delay for general bots
+Crawl-delay: 1
+
+# Host specification
+Host: https://heavycraneinsurance.com

@@ -33,7 +33,6 @@ export const componentRegistry = {
       path: '@components/sections/Hero',
       description: 'Hero section with static background image',
       props: [],
-      images: ['Comfort-Insulation-Arizona-hero1.png - hero background']
     },
     Services: {
       path: '@components/sections/Services',
@@ -44,7 +43,6 @@ export const componentRegistry = {
       path: '@components/sections/BlogSection',
       description: 'Blog preview section',
       props: [],
-      images: ['blog thumbnails - in /public/images/blog/']
     },
     ContactForm: {
       path: '@components/sections/ContactForm',
@@ -72,14 +70,6 @@ export const componentRegistry = {
     }
   },
   
-  // Asset Paths
-  assets: {
-    images: {
-      public: '/public/images/',
-      src: '/src/assets/images/',
-      usage: 'See IMAGE_GUIDE.md for details'
-    }
-  },
   
   // Color Palette
   colors: {

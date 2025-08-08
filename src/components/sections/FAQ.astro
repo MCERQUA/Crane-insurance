@@ -1,8 +1,105 @@
 ---
 // FAQ section based on crane insurance research
+
+const faqData = [
+  {
+    question: "What types of crane insurance coverage do I need?",
+    answer: "Most crane operators need four core types of coverage: General Liability Insurance ($1M to $5M limits for third-party injuries and property damage), Riggers Liability Coverage (specialized coverage for property of others while on the hook), Equipment Physical Damage (protects your crane equipment, typically 1-3% of equipment value annually), and Workers' Compensation (required in all states except Texas for your crane operators)."
+  },
+  {
+    question: "How much does crane insurance cost?",
+    answer: "Crane insurance costs vary based on several factors. Equipment Physical Damage typically costs 1-3% of equipment value annually. For example, a $1 million crane might have a $20,000 annual premium at 2% rate. Other factors affecting cost include equipment age and condition, operating territory and environment, claims history and experience modification, safety program quality, and types of lifting operations."
+  },
+  {
+    question: "Do I need special insurance for different types of cranes?",
+    answer: "While the core coverage types remain the same, different crane types have unique risk profiles. Mobile/All-Terrain Cranes need auto liability for highway travel and higher liability limits for urban operations. Tower Cranes require weather-related coverage and specialized installation/dismantling protection. Crawler Cranes need ground damage coverage and higher capacity liability for heavy lifting operations. Overhead Cranes focus on facility damage and production interruption coverage."
+  },
+  {
+    question: "What are the OSHA requirements for crane insurance?",
+    answer: "OSHA 29 CFR 1926.1427 Subpart CC requires: All operators must be certified by NCCCO, EICA, NCCER, OECP, or CIC; Re-certification every 5 years for all crane operators; Daily pre-shift visual inspections by competent persons; Environmental monitoring including wind, weather, and site condition considerations. Note: 16 states have additional licensing requirements beyond federal OSHA standards."
+  },
+  {
+    question: "What is riggers liability insurance and do I need it?",
+    answer: "Riggers liability insurance is a specialized endorsement that covers property of others while it's on the hook during lifting operations. It covers HVAC equipment worth $500,000+, generators and telecom equipment, industrial machinery and components, and any valuable property being lifted. Yes, you likely need it if you lift valuable equipment or materials belonging to others. Standard general liability policies exclude or limit coverage for property in your care, custody, and control."
+  },
+  {
+    question: "Does crane insurance vary by state?",
+    answer: "Yes, significantly. While federal OSHA provides the baseline, states have varying requirements. High regulation states like Pennsylvania, Massachusetts, and Washington require additional state licensing and testing. Moderate requirement states like California, New York, and Florida have some municipal or environmental considerations. Most other states follow federal minimum OSHA compliance plus local permits. Special Note: Texas is the only state that doesn't require workers' compensation insurance."
+  },
+  {
+    question: "What should I do if I have a crane insurance claim?",
+    answer: "Follow these steps immediately after an incident: 1) Ensure Safety First - Secure the area, provide medical aid if needed, prevent further damage. 2) Document Everything - Take photos, gather witness information, preserve evidence. 3) Report Immediately - Contact your insurance carrier within 24 hours, provide detailed incident report. 4) Cooperate with Investigation - Work with claims adjusters, provide requested documentation, avoid admitting fault."
+  }
+];
 ---
 
 <section class="section-padding bg-concrete-gray" id="faq">
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What types of crane insurance coverage do I need?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most crane operators need four core types of coverage: General Liability Insurance ($1M to $5M limits for third-party injuries and property damage), Riggers Liability Coverage (specialized coverage for property of others while on the hook), Equipment Physical Damage (protects your crane equipment, typically 1-3% of equipment value annually), and Workers' Compensation (required in all states except Texas for your crane operators)."
+        }
+      },
+      {
+        "@type": "Question", 
+        "name": "How much does crane insurance cost?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Crane insurance costs vary based on several factors. Equipment Physical Damage typically costs 1-3% of equipment value annually. For example, a $1 million crane might have a $20,000 annual premium at 2% rate. Other factors affecting cost include equipment age and condition, operating territory and environment, claims history and experience modification, safety program quality, and types of lifting operations."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need special insurance for different types of cranes?", 
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "While the core coverage types remain the same, different crane types have unique risk profiles. Mobile/All-Terrain Cranes need auto liability for highway travel and higher liability limits for urban operations. Tower Cranes require weather-related coverage and specialized installation/dismantling protection. Crawler Cranes need ground damage coverage and higher capacity liability for heavy lifting operations. Overhead Cranes focus on facility damage and production interruption coverage."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the OSHA requirements for crane insurance?",
+        "acceptedAnswer": {
+          "@type": "Answer", 
+          "text": "OSHA 29 CFR 1926.1427 Subpart CC requires: All operators must be certified by NCCCO, EICA, NCCER, OECP, or CIC; Re-certification every 5 years for all crane operators; Daily pre-shift visual inspections by competent persons; Environmental monitoring including wind, weather, and site condition considerations. Note: 16 states have additional licensing requirements beyond federal OSHA standards."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is riggers liability insurance and do I need it?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Riggers liability insurance is a specialized endorsement that covers property of others while it's on the hook during lifting operations. It covers HVAC equipment worth $500,000+, generators and telecom equipment, industrial machinery and components, and any valuable property being lifted. Yes, you likely need it if you lift valuable equipment or materials belonging to others. Standard general liability policies exclude or limit coverage for property in your care, custody, and control."
+        }
+      },
+      {
+        "@type": "Question", 
+        "name": "Does crane insurance vary by state?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, significantly. While federal OSHA provides the baseline, states have varying requirements. High regulation states like Pennsylvania, Massachusetts, and Washington require additional state licensing and testing. Moderate requirement states like California, New York, and Florida have some municipal or environmental considerations. Most other states follow federal minimum OSHA compliance plus local permits. Special Note: Texas is the only state that doesn't require workers' compensation insurance."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What should I do if I have a crane insurance claim?",
+        "acceptedAnswer": {
+          "@type": "Answer", 
+          "text": "Follow these steps immediately after an incident: 1) Ensure Safety First - Secure the area, provide medical aid if needed, prevent further damage. 2) Document Everything - Take photos, gather witness information, preserve evidence. 3) Report Immediately - Contact your insurance carrier within 24 hours, provide detailed incident report. 4) Cooperate with Investigation - Work with claims adjusters, provide requested documentation, avoid admitting fault."
+        }
+      }
+    ]
+  }
+  </script>
+
   <div class="container-padding max-w-4xl mx-auto">
     <div class="text-center mb-16">
       <h2 class="heading-lg text-steel-black mb-4">
@@ -310,7 +407,7 @@
             Get Expert Consultation
           </a>
           <a 
-            href="tel:1-800-CRANE-INS" 
+            href="tel:+18449675247" 
             class="inline-flex items-center justify-center px-8 py-3 bg-transparent text-steel-black font-semibold rounded-full border-2 border-steel-black hover:bg-steel-black hover:text-aluminum transition-all duration-300"
           >
             <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

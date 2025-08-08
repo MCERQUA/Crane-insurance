@@ -1,0 +1,240 @@
+{
+  "contractor_licensing_urls": {
+    "Alabama": {
+      "name": "Alabama General Contractors Board",
+      "url": "https://genconbd.alabama.gov/default.aspx"
+    },
+    "Alaska": {
+      "name": "Construction Contractors Professional Licensing",
+      "url": "https://www.commerce.alaska.gov/web/cbpl/ProfessionalLicensing/ConstructionContractors.aspx"
+    },
+    "Arizona": {
+      "name": "Arizona Registrar of Contractors",
+      "url": "https://roc.az.gov/"
+    },
+    "Arkansas": {
+      "name": "Arkansas Contractors Licensing Board",
+      "url": "https://labor.arkansas.gov/licensing/arkansas-contractors-licensing-board/"
+    },
+    "California": {
+      "name": "Contractors State License Board",
+      "url": "https://www.cslb.ca.gov/",
+      "alternate_url": "http://cslb.ca.gov"
+    },
+    "Colorado": {
+      "name": "See Colorado County Tab",
+      "url": null,
+      "note": "Licensing handled at county level"
+    },
+    "Connecticut": {
+      "name": "Various licensing types",
+      "urls": {
+        "home_improvement": "https://portal.ct.gov/dcp/license-services-division/all-license-applications/home-improvement-applications?language=en_US",
+        "new_home_construction": "https://portal.ct.gov/dcp/license-services-division/all-license-applications/new-home-construction-contractor-applications",
+        "major_contractor": "https://portal.ct.gov/dcp/license-services-division/all-license-applications/major-contractor-registration-application?language=en_US"
+      },
+      "note": "Different URLs for Home Improvement, New Home Construction, and Major Contractor"
+    },
+    "Delaware": {
+      "name": "Delaware One Stop - Construction Contractors",
+      "url": "https://onestop.delaware.gov/Operate_Contractors"
+    },
+    "Florida": {
+      "name": "DBPR Licensing Portal",
+      "url": "https://www.myfloridalicense.com/intentions2.asp?chBoard=true&boardid=06&SID"
+    },
+    "Georgia": {
+      "name": "State Licensing Board for Residential and Commercial General Contractors",
+      "url": "https://sos.ga.gov/state-licensing-board-residential-and-commercial-general-contractors"
+    },
+    "Hawaii": {
+      "name": "Professional & Vocational Licensing Division",
+      "url": "https://cca.hawaii.gov/pvl/e_services/"
+    },
+    "Idaho": {
+      "name": "Idaho Contractors Board",
+      "url": "https://dopl.idaho.gov/con/"
+    },
+    "Illinois": {
+      "name": "Various city-level licensing",
+      "urls": {
+        "chicago": "https://www.chicago.gov/city/en/depts/bldgs/supp_info/TLdetails/GC.html",
+        "aurora": "https://www.aurora.il.us/Property-and-Business/Development/Building-and-Construction",
+        "joliet": "https://www.joliet.gov/government/departments/community-development/building-inspectional-services-division"
+      },
+      "note": "Licensing handled at city level - Chicago, Aurora, Joliet, Rockford"
+    },
+    "Indiana": {
+      "name": "IDOA Contractors and Sub-contractors",
+      "url": "https://www.in.gov/idoa/state-property-and-facilities/public-works/certification-board/contractors-and-sub-contractors/"
+    },
+    "Iowa": {
+      "name": "Contractor Registration",
+      "url": "https://dial.iowa.gov/licenses/building/contractors"
+    },
+    "Kansas": {
+      "name": "County Level Licensing",
+      "url": null,
+      "note": "Licensing handled at county level - Johnson County, Sedgwick County"
+    },
+    "Kentucky": {
+      "name": "Various trade-specific licensing",
+      "url": null,
+      "note": "Electrical, Plumbing, HVAC - Local City and County"
+    },
+    "Louisiana": {
+      "name": "Louisiana State Licensing Board for Contractors",
+      "url": "https://lslbc.louisiana.gov/"
+    },
+    "Maine": {
+      "name": "Various licensing levels",
+      "url": null,
+      "note": "Local State and County - Home Improvement, Plumbing, Electrical"
+    },
+    "Maryland": {
+      "name": "Maryland Home Improvement Commission (MHIC)",
+      "url": "https://www.dllr.state.md.us/license/mhic/mhiclicreq.shtml"
+    },
+    "Massachusetts": {
+      "name": "Home Improvement Contractor Registration",
+      "url": "https://www.mass.gov/home-improvement-contractor-registration-and-renewal"
+    },
+    "Michigan": {
+      "name": "Various licensing types and cities",
+      "urls": {
+        "residential_builders": "https://www.michigan.gov/lara/bureau-list/bcc/sections/licensing-section/residential-builders"
+      },
+      "note": "Residential Builders, Electrical, Mechanical, General Contractor - City of Detroit, Grand Rapids, Warren, Sterling Heights, Ann Arbor"
+    },
+    "Minnesota": {
+      "name": "Residential Contractors, Remodelers, Roofers",
+      "url": "https://www.dli.mn.gov/business/residential-contractors-remodelers-roofers"
+    },
+    "Missouri": {
+      "name": "Professional Registration & Licensing",
+      "url": "https://www.mo.gov/work/professional-registration-licensing/"
+    },
+    "Montana": {
+      "name": "Construction Contractor Registration",
+      "url": "https://erd.dli.mt.gov/work-comp-regulations/montana-contractor/construction-contractor-registration"
+    },
+    "Nebraska": {
+      "name": "Contractor Registration",
+      "url": "https://dol.nebraska.gov/conreg"
+    },
+    "Nevada": {
+      "name": "Nevada Contractor License Search",
+      "url": "https://nsla.nv.gov/az/nevada-contractor-license-search"
+    },
+    "New Hampshire": {
+      "name": "Electrical",
+      "url": null,
+      "note": "Electrical contractors only mentioned"
+    },
+    "New Jersey": {
+      "name": "Verify a Contractor's Registration",
+      "url": "https://www.njconsumeraffairs.gov/hec/Pages/verification.aspx"
+    },
+    "New Mexico": {
+      "name": "Verify Professional Licenses",
+      "url": "https://www.rld.nm.gov/about-us/public-information-hub/consumer-protection/verify-a-license/"
+    },
+    "New York": {
+      "name": "Not listed",
+      "url": null,
+      "note": "No information provided in source document"
+    },
+    "North Carolina": {
+      "name": "Not listed",
+      "url": null,
+      "note": "No information provided in source document"
+    },
+    "North Dakota": {
+      "name": "Not listed",
+      "url": null,
+      "note": "No information provided in source document"
+    },
+    "Ohio": {
+      "name": "Ohio Construction Industry Licensing Board",
+      "url": "https://com.ohio.gov/divisions-and-programs/industrial-compliance/boards/ohio-construction-industry-licensing-board",
+      "alternate_url": "http://com.ohio.gov"
+    },
+    "Oklahoma": {
+      "name": "Various trade-specific licensing",
+      "urls": {
+        "verification": "https://oklahoma.gov/cib/consumers/are-they-licensed.html"
+      },
+      "note": "Roofers, Electrical, Mechanical, Plumbing - License verification available"
+    },
+    "Oregon": {
+      "name": "Construction Contractors Board",
+      "url": "http://oregon.gov/ccb"
+    },
+    "Pennsylvania": {
+      "name": "Home Improvement Contractor Registration",
+      "url": "https://www.attorneygeneral.gov/resources/home-improvement-contractor-registration/"
+    },
+    "Rhode Island": {
+      "name": "Contractors' Registration and Licensing Board",
+      "url": "https://crb.ri.gov/"
+    },
+    "South Carolina": {
+      "name": "SC Contractors' Licensing Board",
+      "url": "https://www.llr.sc.gov/clb/"
+    },
+    "South Dakota": {
+      "name": "SD Board of Technical Professions",
+      "url": "https://dlr.sd.gov/btp/",
+      "note": "Also Electricians, Plumbers - See South Dakota Cities and Counties Tab"
+    },
+    "Tennessee": {
+      "name": "Tennessee Board for Licensing Contractors",
+      "url": "https://www.tn.gov/commerce/regboards/contractors.html"
+    },
+    "Texas": {
+      "name": "Various trade-specific boards",
+      "urls": {
+        "electricians": "https://www.tdlr.texas.gov/electricians/",
+        "hvac": "https://www.tdlr.texas.gov/acr/",
+        "plumbing": "https://tsbpe.texas.gov/"
+      },
+      "note": "Electricians, HVAC (Air Conditioning and Refrigeration), Plumbing - separate boards for each trade"
+    },
+    "Utah": {
+      "name": "General Contractor Licensing",
+      "url": "https://dopl.utah.gov/contracting/apply-for-a-license/general-contractor/"
+    },
+    "Vermont": {
+      "name": "Residential Contractors - Office of Professional Regulation",
+      "url": "https://sos.vermont.gov/residential-contractors"
+    },
+    "Virginia": {
+      "name": "Board for Contractors",
+      "url": "https://www.dpor.virginia.gov/Boards/Contractors/"
+    },
+    "Washington": {
+      "name": "Labor & Industries",
+      "url": "https://www.lni.wa.gov/"
+    },
+    "West Virginia": {
+      "name": "WV Contractor Licensing Board",
+      "url": "https://wvclboard.wv.gov/"
+    },
+    "Wisconsin": {
+      "name": "DSPS Public Look-Up",
+      "url": "https://dsps.wi.gov/Pages/SelfService/LicenseLookUp.aspx"
+    },
+    "Wyoming": {
+      "name": "Resident Contractor Resources",
+      "url": "https://dws.wyo.gov/dws-division/labor-standards/resident-contractor-resources/"
+    }
+  },
+  "metadata": {
+    "last_updated": "2025-08-07",
+    "source": "Contractor License URLs PDF with additional corrections",
+    "note": "Some states handle licensing at county or city level, or through trade-specific boards. States with multiple licensing types have nested URL objects.",
+    "total_states": 50,
+    "states_with_urls": 43,
+    "states_without_central_url": 7
+  }
+}

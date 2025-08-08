@@ -1,33 +1,101 @@
 ---
 import GlassCard from '../ui/GlassCard.tsx';
 import GlassButton from '../ui/GlassButton.tsx';
-import atticImage from '@assets/images/attic-spray-foam-insulation-arizona-comfort.png';
-import crawlSpaceImage from '@assets/images/crawl-space-foam-insulation-arizona-comfort.png';
-import wallImage from '@assets/images/wall-ceilings-foam-insulation-arizona-comfort.png';
 
 const services = [
   {
     title: 'General Liability Insurance',
     description: 'Comprehensive liability coverage protecting against property damage and bodily injury during crane operations.',
     features: ['$1M-$5M coverage limits', 'Third-party protection', 'Legal defense coverage', 'Project requirements compliance'],
-    image: atticImage
+    icon: '🏗️'
   },
   {
     title: 'Riggers Liability Coverage',
     description: 'Specialized coverage for property of others while "on the hook" during lifting operations.',
     features: ['High-value equipment protection', 'Care, custody & control coverage', 'HVAC & telecom equipment', 'Generator & machinery coverage'],
-    image: crawlSpaceImage
+    icon: '⚖️'
   },
   {
     title: 'Equipment Physical Damage',
     description: 'Complete protection for your crane equipment against damage, theft, and total loss.',
     features: ['1-3% of equipment value', 'Replacement cost coverage', 'Boom insurance available', 'Worldwide protection'],
-    image: wallImage
+    icon: '🚛'
   }
 ];
 ---
 
 <section class="section-padding bg-concrete-gray" id="services">
+  <!-- Services Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "provider": {
+      "@type": "InsuranceAgency",
+      "name": "Heavy Crane Insurance - A Division of Contractors Choice Agency"
+    },
+    "serviceType": "Crane Insurance Services",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Crane Insurance Coverage Types",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "@id": "https://heavycraneinsurance.com/general-liability",
+            "name": "General Liability Insurance",
+            "description": "Comprehensive liability coverage protecting against property damage and bodily injury during crane operations.",
+            "category": "Insurance",
+            "serviceType": "General Liability Coverage",
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "USD",
+              "priceSpecification": {
+                "@type": "PriceSpecification",
+                "minPrice": "1000000",
+                "maxPrice": "5000000",
+                "priceCurrency": "USD",
+                "description": "$1M-$5M coverage limits"
+              }
+            }
+          }
+        },
+        {
+          "@type": "Offer", 
+          "itemOffered": {
+            "@type": "Service",
+            "@id": "https://heavycraneinsurance.com/riggers-liability",
+            "name": "Riggers Liability Coverage",
+            "description": "Specialized coverage for property of others while on the hook during lifting operations.",
+            "category": "Insurance",
+            "serviceType": "Riggers Liability Coverage"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service", 
+            "@id": "https://heavycraneinsurance.com/equipment-coverage",
+            "name": "Equipment Physical Damage",
+            "description": "Complete protection for your crane equipment against damage, theft, and total loss.",
+            "category": "Insurance",
+            "serviceType": "Equipment Physical Damage Coverage",
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "USD",
+              "priceSpecification": {
+                "@type": "PriceSpecification",
+                "description": "1-3% of equipment value annually"
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+  </script>
+
   <div class="container-padding max-w-7xl mx-auto">
     <div class="text-center mb-16">
       <h2 class="heading-lg text-steel-black mb-4">
@@ -59,16 +127,13 @@ const services = [
             
             <!-- Inner container -->
             <div class="relative h-full flex flex-col">
-              <!-- Service Image -->
-              <div class="relative mb-4 overflow-hidden rounded-2xl aspect-[4/3]">
-                <img 
-                  src={service.image.src} 
-                  alt={`${service.title} service`}
-                  class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
-                  loading="lazy"
-                />
-                <!-- Subtle overlay -->
-                <div class="absolute inset-0 bg-gradient-to-t from-charcoal-black/30 to-transparent opacity-40"></div>
+              <!-- Service Icon -->
+              <div class="relative mb-4 flex items-center justify-center rounded-2xl aspect-[4/3] bg-gradient-to-br from-construction-yellow/20 to-machinery-gray/30">
+                <div class="text-6xl transform group-hover:scale-110 transition-transform duration-700">
+                  {service.icon}
+                </div>
+                <!-- Decorative background -->
+                <div class="absolute inset-0 bg-gradient-to-t from-charcoal-black/10 to-transparent opacity-40 rounded-2xl"></div>
               </div>
               
               <!-- Content container - fixed bottom styling -->

@@ -1,0 +1,26 @@
+{
+  "name": "Heavy Crane Insurance - A Division of Contractors Choice Agency",
+  "short_name": "Heavy Crane Insurance",
+  "description": "Professional crane insurance coverage including general liability, riggers liability, and equipment physical damage for crane operators and construction companies.",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#F59E0B",
+  "background_color": "#F5F5F4",
+  "display": "minimal-ui",
+  "orientation": "portrait",
+  "scope": "/",
+  "start_url": "/",
+  "categories": ["insurance", "business", "construction"],
+  "lang": "en-US",
+  "dir": "ltr"
+}

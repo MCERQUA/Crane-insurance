@@ -1,6 +1,6 @@
-# ComfortCo Website
+# Heavy Crane Insurance Website
 
-A modern, mobile-first website built with Astro, React, and Tailwind CSS featuring glass morphism effects and a component-based architecture.
+A modern, mobile-first insurance website built with Astro, React, and Tailwind CSS featuring professional design and comprehensive SEO optimization for crane insurance services.
 
 ## 🚀 Project Structure
 

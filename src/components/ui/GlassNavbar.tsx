@@ -16,6 +16,7 @@ const GlassNavbar: React.FC = () => {
   const navItems = [
     { label: 'Home', href: '/' },
     { label: 'Coverage', href: '#services' },
+    { label: 'Blog', href: '/blog' },
     { label: 'Compliance', href: '#compliance' },
     { label: 'FAQ', href: '#faq' },
     { label: 'Quote', href: '#contact-form' },

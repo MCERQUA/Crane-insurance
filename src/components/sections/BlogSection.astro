@@ -1,54 +1,68 @@
 ---
-import GlassCard from '../ui/GlassCard.tsx';
+import { getCollection } from 'astro:content';
 import GlassButton from '../ui/GlassButton.tsx';
+import GlassCard from '../ui/GlassCard.tsx';
 
-// For now, we'll have a placeholder blog post
-const blogPosts = [
-  {
-    slug: 'welcome-to-comfort-insulation',
-    title: 'Welcome to Comfort Insulation',
-    excerpt: 'Discover how proper insulation can transform your Arizona home into a comfortable, energy-efficient sanctuary.',
-    date: new Date().toLocaleDateString(),
-    readTime: '5 min read'
-  }
-];
+// Get recent blog posts (limit to 3 for homepage)
+const blogPosts = await getCollection('blog');
+const recentPosts = blogPosts
+  .sort((a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime())
+  .slice(0, 3);
+
+// Function to format date
+function formatDate(date: Date) {
+  return new Intl.DateTimeFormat('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  }).format(date);
+}
 ---
 
-<section class="section-padding bg-light-gray" id="blog">
+<section class="section-padding bg-charcoal-black" id="blog">
   <div class="container-padding max-w-7xl mx-auto">
     <div class="text-center mb-12">
-      <h2 class="heading-lg text-espresso mb-4">
+      <h2 class="text-4xl lg:text-5xl font-bold text-aluminum mb-4">
         Latest Insights
       </h2>
-      <p class="body-text text-warm-gray max-w-2xl mx-auto">
-        Expert tips and insights for maintaining a comfortable home
+      <p class="text-lg text-aluminum/80 max-w-2xl mx-auto">
+        Expert tips and industry insights for crane operators and construction professionals
       </p>
     </div>
     
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {blogPosts.map((post) => (
-        <div class="animate-slide-up">
-          <GlassCard client:visible variant="white">
+      {recentPosts.map((post, index) => (
+        <div class="animate-slide-up" style={`animation-delay: ${index * 0.1}s`}>
+          <GlassCard client:visible variant="light">
             <article class="space-y-4">
-              <div class="aspect-video bg-gradient-to-br from-sand to-khaki rounded-2xl overflow-hidden group">
-                <div class="w-full h-full flex items-center justify-center">
-                  <span class="text-soft-white/80 font-medium">Blog Image</span>
-                </div>
+              <div class="aspect-video bg-gradient-to-br from-machinery-gray to-dark-steel rounded-2xl overflow-hidden group relative">
+                {post.data.featuredImage ? (
+                  <img 
+                    src={post.data.featuredImage} 
+                    alt={post.data.title}
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                ) : (
+                  <div class="w-full h-full flex items-center justify-center">
+                    <span class="text-aluminum/60 font-medium">Blog Image</span>
+                  </div>
+                )}
+                <div class="absolute inset-0 bg-gradient-to-t from-dark-steel/60 to-transparent"></div>
               </div>
               
               <div class="space-y-3">
-                <div class="flex items-center gap-4 text-sm text-warm-gray">
-                  <span>{post.date}</span>
-                  <span class="text-khaki">•</span>
-                  <span>{post.readTime}</span>
+                <div class="flex items-center gap-4 text-sm text-aluminum/60">
+                  <span>{formatDate(post.data.pubDate)}</span>
+                  <span class="text-construction-yellow">•</span>
+                  <span>{post.data.readTime || '5 min read'}</span>
                 </div>
                 
-                <h3 class="text-2xl font-bold text-espresso">
-                  {post.title}
+                <h3 class="text-xl font-bold text-aluminum group-hover:text-construction-yellow transition-colors duration-300">
+                  {post.data.title}
                 </h3>
                 
-                <p class="text-warm-gray">
-                  {post.excerpt}
+                <p class="text-aluminum/70 line-clamp-3">
+                  {post.data.description}
                 </p>
               </div>
               
@@ -56,7 +70,7 @@ const blogPosts = [
                 href={`/blog/${post.slug}`}
                 size="sm"
                 variant="outline"
-                className="w-full"
+                className="w-full !border-construction-yellow/30 !text-construction-yellow hover:!bg-construction-yellow/10"
                 client:visible
               >
                 Read More
@@ -66,24 +80,37 @@ const blogPosts = [
         </div>
       ))}
       
-      <!-- Coming Soon Cards -->
-      {[1, 2].map((i) => (
-        <div class="animate-slide-up" style={`animation-delay: ${i * 0.1}s`}>
-          <GlassCard client:visible variant="warm">
+      <!-- Show "Coming Soon" cards if we have fewer than 3 posts -->
+      {Array.from({ length: Math.max(0, 3 - recentPosts.length) }, (_, i) => (
+        <div class="animate-slide-up" style={`animation-delay: ${(recentPosts.length + i) * 0.1}s`}>
+          <GlassCard client:visible variant="light">
             <article class="space-y-4 opacity-60">
-              <div class="aspect-video bg-gradient-to-br from-cream to-sand rounded-2xl flex items-center justify-center">
-                <span class="text-taupe font-medium text-lg">Coming Soon</span>
+              <div class="aspect-video bg-gradient-to-br from-machinery-gray/30 to-dark-steel/30 rounded-2xl flex items-center justify-center">
+                <span class="text-aluminum/40 font-medium text-lg">Coming Soon</span>
               </div>
               
               <div class="space-y-3">
-                <div class="h-4 bg-sand/30 rounded w-3/4"></div>
-                <div class="h-6 bg-sand/30 rounded"></div>
-                <div class="h-16 bg-sand/30 rounded"></div>
+                <div class="h-4 bg-aluminum/10 rounded w-3/4"></div>
+                <div class="h-6 bg-aluminum/10 rounded"></div>
+                <div class="h-16 bg-aluminum/10 rounded"></div>
               </div>
             </article>
           </GlassCard>
         </div>
       ))}
+    </div>
+
+    <!-- View All Blog Posts Button -->
+    <div class="text-center mt-12">
+      <GlassButton
+        href="/blog"
+        size="lg"
+        variant="outline"
+        className="!border-construction-yellow !text-construction-yellow hover:!bg-construction-yellow/10"
+        client:visible
+      >
+        View All Articles
+      </GlassButton>
     </div>
   </div>
 </section>

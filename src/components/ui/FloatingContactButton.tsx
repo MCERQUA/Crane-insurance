@@ -24,27 +24,27 @@ const FloatingContactButton: React.FC = () => {
           transform transition-all duration-300
           ${isOpen ? 'scale-100' : 'scale-95'}
         `}>
-          <div className="bg-soft-white rounded-3xl p-8 shadow-elegant">
+          <div className="bg-dark-steel/80 backdrop-blur-md rounded-3xl p-8 shadow-elegant border border-construction-yellow/30">
             <button
               onClick={() => setIsOpen(false)}
-              className="absolute top-4 right-4 p-2 rounded-full hover:bg-khaki/10 transition-colors"
+              className="absolute top-4 right-4 p-2 rounded-full hover:bg-construction-yellow/10 transition-colors"
             >
-              <X className="w-5 h-5 text-espresso" />
+              <X className="w-5 h-5 !text-construction-yellow" />
             </button>
             
-            <h3 className="text-2xl font-bold text-espresso mb-6">Get in Touch</h3>
+            <h3 className="text-2xl font-bold !text-construction-yellow mb-6">Get in Touch</h3>
             
             <div className="space-y-4">
               <a
                 href="tel:+1234567890"
-                className="flex items-center gap-4 p-4 rounded-2xl bg-cream hover:bg-sand/30 transition-colors group"
+                className="flex items-center gap-4 p-4 rounded-2xl bg-dark-steel/40 hover:bg-construction-yellow/10 transition-colors group border border-construction-yellow/20"
               >
-                <div className="p-3 rounded-full bg-terra-cotta/10 group-hover:bg-terra-cotta/20 transition-colors">
-                  <Phone className="w-6 h-6 text-terra-cotta" />
+                <div className="p-3 rounded-full bg-construction-yellow/10 group-hover:bg-construction-yellow/20 transition-colors">
+                  <Phone className="w-6 h-6 !text-construction-yellow" />
                 </div>
                 <div>
-                  <p className="font-bold text-espresso">Call Us</p>
-                  <p className="text-sm text-warm-gray">(123) 456-7890</p>
+                  <p className="font-bold !text-construction-yellow">Call Us</p>
+                  <p className="text-sm text-aluminum/80">(123) 456-7890</p>
                 </div>
               </a>
               
@@ -54,7 +54,7 @@ const FloatingContactButton: React.FC = () => {
                   // Scroll to contact form
                   document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' });
                 }}
-                className="w-full p-4 rounded-2xl bg-terra-cotta hover:bg-terra-cotta/90 text-soft-white font-bold transition-all duration-300 transform hover:-translate-y-0.5 shadow-soft hover:shadow-medium"
+                className="w-full p-4 rounded-2xl bg-construction-yellow hover:bg-construction-yellow/90 !text-dark-steel font-bold transition-all duration-300 transform hover:-translate-y-0.5 shadow-soft hover:shadow-medium border border-construction-yellow"
               >
                 Send a Message
               </button>

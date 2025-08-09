@@ -8,10 +8,17 @@ import LogoScroller from '../ui/LogoScroller.tsx';
   class="relative min-h-screen flex items-center overflow-hidden"
 >
   <!-- Static Hero Background -->
-  <!-- Background with gradient -->
+  <!-- Background with hero image and overlay -->
   <div class="absolute inset-0 z-0">
-    <!-- Gradient background -->
-    <div class="absolute inset-0 bg-gradient-to-br from-dark-steel via-charcoal-black to-machinery-gray"></div>
+    <!-- Hero background image -->
+    <img 
+      src="/images/hero/construction-hero.jpg"
+      alt="Professional construction site with cranes and industrial equipment"
+      class="w-full h-full object-cover"
+      loading="eager"
+    />
+    <!-- Dark overlay for text readability -->
+    <div class="absolute inset-0 bg-gradient-to-br from-dark-steel/80 via-charcoal-black/70 to-machinery-gray/80"></div>
   </div>
   
   <!-- Content -->

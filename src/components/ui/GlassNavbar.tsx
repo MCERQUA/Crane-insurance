@@ -74,13 +74,11 @@ const GlassNavbar: React.FC = () => {
               <div className="relative z-10 flex items-center justify-between">
                 {/* Logo - Adjusted sizes: smaller on desktop, same on mobile */}
                 <a href="/" className="flex items-center group">
-                  <div className={`text-2xl font-bold transition-all duration-300 ${
-                    isScrolled ? 'text-steel-black' : 'text-aluminum'
-                  }`}
+                  <div className="text-2xl font-bold transition-all duration-300 !text-construction-yellow"
                   style={{
-                    textShadow: isScrolled ? '0 1px 2px rgba(0, 0, 0, 0.05)' : '0 2px 8px rgba(0, 0, 0, 0.5)'
+                    textShadow: '0 0 3px rgba(0, 0, 0, 0.8), 0 1px 4px rgba(0, 0, 0, 0.6), 1px 1px 0 rgba(0, 0, 0, 0.8), -1px -1px 0 rgba(0, 0, 0, 0.8), 1px -1px 0 rgba(0, 0, 0, 0.8), -1px 1px 0 rgba(0, 0, 0, 0.8)'
                   }}>
-                    <span className="text-construction-yellow">Crane</span> Insurance
+                    <span className="!text-construction-yellow">Crane</span> Insurance
                   </div>
                 </a>
 
@@ -90,11 +88,9 @@ const GlassNavbar: React.FC = () => {
                     <a
                       key={item.label}
                       href={item.href}
-                      className={`font-medium transition-all duration-300 hover:text-construction-yellow ${
-                        isScrolled ? 'text-steel-black' : 'text-aluminum'
-                      }`}
+                      className="font-medium transition-all duration-300 !text-construction-yellow hover:brightness-110"
                       style={{
-                        textShadow: isScrolled ? '0 1px 2px rgba(0, 0, 0, 0.05)' : '0 2px 8px rgba(0, 0, 0, 0.5)'
+                        textShadow: '0 0 2px rgba(0, 0, 0, 0.8), 0 1px 3px rgba(0, 0, 0, 0.6), 1px 1px 0 rgba(0, 0, 0, 0.8), -1px -1px 0 rgba(0, 0, 0, 0.8), 1px -1px 0 rgba(0, 0, 0, 0.8), -1px 1px 0 rgba(0, 0, 0, 0.8)'
                       }}
                     >
                       {item.label}
@@ -117,15 +113,16 @@ const GlassNavbar: React.FC = () => {
                 {/* Mobile Menu Button */}
                 <button
                   onClick={() => setIsOpen(!isOpen)}
-                  className={`md:hidden p-2 rounded-xl transition-colors ${
-                    isScrolled ? 'hover:bg-espresso/10' : 'hover:bg-soft-white/10'
-                  }`}
+                  className="md:hidden p-2 rounded-xl transition-colors hover:bg-construction-yellow/10"
                   aria-label="Toggle menu"
+                  style={{
+                    filter: 'drop-shadow(0 0 3px rgba(0, 0, 0, 0.9)) drop-shadow(1px 1px 0 rgba(0, 0, 0, 0.9)) drop-shadow(-1px -1px 0 rgba(0, 0, 0, 0.9)) drop-shadow(1px -1px 0 rgba(0, 0, 0, 0.9)) drop-shadow(-1px 1px 0 rgba(0, 0, 0, 0.9)) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.7))'
+                  }}
                 >
                   {isOpen ? (
-                    <X className={`w-6 h-6 ${isScrolled ? 'text-espresso' : 'text-soft-white'}`} />
+                    <X className="w-6 h-6 !text-construction-yellow" />
                   ) : (
-                    <Menu className={`w-6 h-6 ${isScrolled ? 'text-espresso' : 'text-soft-white'}`} />
+                    <Menu className="w-6 h-6 !text-construction-yellow" />
                   )}
                 </button>
               </div>
@@ -141,19 +138,18 @@ const GlassNavbar: React.FC = () => {
                       key={item.label}
                       href={item.href}
                       onClick={() => setIsOpen(false)}
-                      className={`block px-4 py-3 rounded-2xl font-medium transition-all duration-300 ${
-                        isScrolled 
-                          ? 'text-espresso hover:bg-espresso/10' 
-                          : 'text-soft-white hover:bg-soft-white/10'
-                      }`}
+                      className="block px-4 py-3 rounded-2xl font-medium transition-all duration-300 !text-construction-yellow hover:bg-construction-yellow/10"
+                      style={{
+                        textShadow: '0 0 2px rgba(0, 0, 0, 0.8), 0 1px 3px rgba(0, 0, 0, 0.6), 1px 1px 0 rgba(0, 0, 0, 0.8), -1px -1px 0 rgba(0, 0, 0, 0.8), 1px -1px 0 rgba(0, 0, 0, 0.8), -1px 1px 0 rgba(0, 0, 0, 0.8)'
+                      }}
                     >
                       {item.label}
                     </a>
                   ))}
                   <button className="
                     w-full px-4 py-3 rounded-2xl font-medium transition-all duration-300
-                    bg-terra-cotta/60 text-soft-white hover:bg-terra-cotta/70 
-                    backdrop-blur-sm border border-terra-cotta/20 shadow-glass
+                    bg-construction-yellow/80 !text-dark-steel hover:bg-construction-yellow/90 
+                    backdrop-blur-sm border border-construction-yellow/30 shadow-glass
                     relative overflow-hidden
                   ">
                     <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent" />

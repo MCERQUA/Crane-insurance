@@ -71,26 +71,26 @@ const FloatingContactButton: React.FC = () => {
       >
         <div className="relative">
           {/* Subtle glow effect */}
-          <div className="absolute inset-0 rounded-full bg-terra-cotta opacity-20 blur-xl group-hover:opacity-30 transition-opacity" />
+          <div className="absolute inset-0 rounded-full bg-construction-yellow opacity-20 blur-xl group-hover:opacity-30 transition-opacity" />
           
           {/* Button with glass effect */}
           <div className="
             relative w-14 h-14 sm:w-16 sm:h-16 rounded-full
-            bg-terra-cotta/40 backdrop-blur-md
-            border border-terra-cotta/20
+            bg-dark-steel/80 backdrop-blur-md
+            border border-construction-yellow/40
             shadow-glass
             transform transition-all duration-300
-            group-hover:scale-110 group-hover:bg-terra-cotta/50
+            group-hover:scale-110 group-hover:bg-dark-steel/90
             flex items-center justify-center
             overflow-hidden
           ">
             {/* Glass light effect */}
-            <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent" />
-            <Phone className="w-6 h-6 sm:w-7 sm:h-7 text-soft-white relative z-10" />
+            <div className="absolute inset-0 bg-gradient-to-br from-construction-yellow/10 to-transparent" />
+            <Phone className="w-6 h-6 sm:w-7 sm:h-7 !text-construction-yellow relative z-10" />
           </div>
           
           {/* Pulse animation */}
-          <div className="absolute inset-0 rounded-full border-2 border-terra-cotta/30 animate-ping" />
+          <div className="absolute inset-0 rounded-full border-2 border-construction-yellow/40 animate-ping" />
         </div>
       </button>
     </>

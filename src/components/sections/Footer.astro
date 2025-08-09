@@ -1,111 +1,140 @@
 ---
 const currentYear = new Date().getFullYear();
-
-const footerLinks = {
-  company: [
-    { label: 'About', href: '#about' },
-    { label: 'Coverage', href: '#services' },
-    { label: 'Claims', href: 'tel:+18449675247' },
-    { label: 'Get Quote', href: '#contact-form' }
-  ],
-  support: [
-    { label: 'Contact', href: '#contact-form' },
-    { label: 'FAQ', href: '#faq' },
-    { label: 'Hours: Mon-Fri 9AM-5PM', href: 'tel:+18449675247' },
-  ],
-  contact: [
-    { label: '844-967-5247', href: 'tel:+18449675247' },
-    { label: 'info@contractorschoiceagency.com', href: 'mailto:info@contractorschoiceagency.com' },
-    { label: '12220 E Riggs Rd, Chandler AZ 85249', href: 'https://maps.google.com?q=12220+E+Riggs+Rd+Chandler+AZ+85249' }
-  ]
-};
 ---
 
-<footer class="bg-charcoal-black text-aluminum py-16">
+<footer class="bg-charcoal-black text-aluminum py-12">
   <div class="container-padding max-w-7xl mx-auto">
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-      <!-- Brand -->
-      <div class="space-y-4">
-        <a href="/" class="inline-block">
-          <div class="h-16 flex items-center">
-            <h3 class="text-2xl font-bold text-construction-yellow">Heavy Crane Insurance</h3>
+    <!-- Main Footer Content -->
+    <div class="space-y-8">
+      <!-- Brand & Contact Info - Mobile First -->
+      <div class="space-y-6">
+        <div class="text-center sm:text-left">
+          <a href="/" class="inline-block">
+            <h3 class="text-2xl sm:text-3xl font-bold text-construction-yellow">Heavy Crane Insurance</h3>
+          </a>
+          <p class="text-construction-yellow/80 text-sm font-medium mt-1">
+            A Division of Contractors Choice Agency
+          </p>
+          <p class="text-aluminum/60 text-sm mt-2 max-w-md">
+            Comprehensive crane insurance for heavy equipment operations nationwide.
+          </p>
+        </div>
+
+        <!-- Contact Info - Prominently displayed on mobile -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 p-6 bg-dark-steel/30 rounded-2xl border border-construction-yellow/20">
+          <div class="space-y-3">
+            <h4 class="font-semibold text-construction-yellow text-sm uppercase tracking-wide">Contact</h4>
+            <div class="space-y-2">
+              <a 
+                href="tel:+18449675247"
+                class="flex items-center gap-3 text-aluminum hover:text-construction-yellow transition-colors group"
+              >
+                <div class="w-8 h-8 rounded-full bg-construction-yellow/10 flex items-center justify-center group-hover:bg-construction-yellow/20 transition-colors">
+                  <svg class="w-4 h-4 text-construction-yellow" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                  </svg>
+                </div>
+                <span class="font-medium">844-967-5247</span>
+              </a>
+              <a 
+                href="mailto:info@contractorschoiceagency.com"
+                class="flex items-center gap-3 text-aluminum hover:text-construction-yellow transition-colors group"
+              >
+                <div class="w-8 h-8 rounded-full bg-construction-yellow/10 flex items-center justify-center group-hover:bg-construction-yellow/20 transition-colors">
+                  <svg class="w-4 h-4 text-construction-yellow" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                  </svg>
+                </div>
+                <span class="text-sm">info@contractorschoiceagency.com</span>
+              </a>
+            </div>
           </div>
-        </a>
-        <p class="text-concrete-gray/70 text-sm mb-2">
-          Comprehensive crane insurance for heavy equipment operations.
-        </p>
-        <p class="text-construction-yellow/80 text-xs font-medium">
-          A Division of Contractors Choice Agency
-        </p>
-      </div>
-      
-      <!-- Company Links -->
-      <div>
-        <h3 class="font-semibold mb-4 text-construction-yellow">Company</h3>
-        <ul class="space-y-2">
-          {footerLinks.company.map((link) => (
-            <li>
+          
+          <div class="space-y-3">
+            <h4 class="font-semibold text-construction-yellow text-sm uppercase tracking-wide">Office</h4>
+            <div class="space-y-2">
               <a 
-                href={link.href}
-                class="text-concrete-gray/60 hover:text-construction-yellow transition-colors duration-300 text-sm"
+                href="https://maps.google.com?q=12220+E+Riggs+Rd+Chandler+AZ+85249"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-start gap-3 text-aluminum hover:text-construction-yellow transition-colors group"
               >
-                {link.label}
+                <div class="w-8 h-8 rounded-full bg-construction-yellow/10 flex items-center justify-center group-hover:bg-construction-yellow/20 transition-colors mt-0.5">
+                  <svg class="w-4 h-4 text-construction-yellow" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                  </svg>
+                </div>
+                <div>
+                  <p class="text-sm font-medium">12220 E Riggs Rd</p>
+                  <p class="text-sm text-aluminum/70">Chandler, AZ 85249</p>
+                </div>
               </a>
-            </li>
-          ))}
-        </ul>
+              <div class="flex items-center gap-3 text-aluminum/70">
+                <div class="w-8 h-8 rounded-full bg-construction-yellow/10 flex items-center justify-center">
+                  <svg class="w-4 h-4 text-construction-yellow" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+                  </svg>
+                </div>
+                <span class="text-sm">Mon-Fri 9AM-5PM MST</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      
-      <!-- Support Links -->
-      <div>
-        <h3 class="font-semibold mb-4 text-construction-yellow">Support</h3>
-        <ul class="space-y-2">
-          {footerLinks.support.map((link) => (
-            <li>
-              <a 
-                href={link.href}
-                class="text-concrete-gray/60 hover:text-construction-yellow transition-colors duration-300 text-sm"
-              >
-                {link.label}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </div>
-      
-      <!-- Contact Info -->
-      <div>
-        <h3 class="font-semibold mb-4 text-construction-yellow">Contact Info</h3>
-        <ul class="space-y-2">
-          {footerLinks.contact.map((link) => (
-            <li>
-              <a 
-                href={link.href}
-                class="text-concrete-gray/60 hover:text-construction-yellow transition-colors duration-300 text-sm block"
-                target={link.href.startsWith('http') ? '_blank' : ''}
-                rel={link.href.startsWith('http') ? 'noopener noreferrer' : ''}
-              >
-                {link.label}
-              </a>
-            </li>
-          ))}
-        </ul>
+
+      <!-- Quick Links - Horizontal on mobile -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8">
+        <div>
+          <h4 class="font-semibold text-construction-yellow text-sm uppercase tracking-wide mb-3">Services</h4>
+          <ul class="space-y-2">
+            <li><a href="#services" class="text-aluminum/70 hover:text-construction-yellow transition-colors text-sm">Coverage Types</a></li>
+            <li><a href="#contact-form" class="text-aluminum/70 hover:text-construction-yellow transition-colors text-sm">Get Quote</a></li>
+            <li><a href="tel:+18449675247" class="text-aluminum/70 hover:text-construction-yellow transition-colors text-sm">File Claim</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="font-semibold text-construction-yellow text-sm uppercase tracking-wide mb-3">Company</h4>
+          <ul class="space-y-2">
+            <li><a href="#about" class="text-aluminum/70 hover:text-construction-yellow transition-colors text-sm">About</a></li>
+            <li><a href="/blog" class="text-aluminum/70 hover:text-construction-yellow transition-colors text-sm">Blog</a></li>
+            <li><a href="#compliance" class="text-aluminum/70 hover:text-construction-yellow transition-colors text-sm">Compliance</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="font-semibold text-construction-yellow text-sm uppercase tracking-wide mb-3">Support</h4>
+          <ul class="space-y-2">
+            <li><a href="#faq" class="text-aluminum/70 hover:text-construction-yellow transition-colors text-sm">FAQ</a></li>
+            <li><a href="#contact-form" class="text-aluminum/70 hover:text-construction-yellow transition-colors text-sm">Contact</a></li>
+            <li><a href="tel:+18449675247" class="text-aluminum/70 hover:text-construction-yellow transition-colors text-sm">Emergency</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="font-semibold text-construction-yellow text-sm uppercase tracking-wide mb-3">Legal</h4>
+          <ul class="space-y-2">
+            <li><a href="/privacy" class="text-aluminum/70 hover:text-construction-yellow transition-colors text-sm">Privacy</a></li>
+            <li><a href="/terms" class="text-aluminum/70 hover:text-construction-yellow transition-colors text-sm">Terms</a></li>
+            <li><span class="text-aluminum/50 text-xs">NPN: 8608479</span></li>
+          </ul>
+        </div>
       </div>
     </div>
     
-    <!-- Divider -->
-    <div class="border-t border-machinery-gray/20 pt-8">
-      <div class="flex flex-col md:flex-row justify-between items-center gap-4">
-        <div class="text-concrete-gray/50 text-sm">
-          <p>© {currentYear} Heavy Crane Insurance - A Division of Contractors Choice Agency. All rights reserved.</p>
-          <p class="mt-1">Licensed • Bonded • DOI Compliant • NAIC: 12345</p>
+    <!-- Bottom Bar -->
+    <div class="border-t border-machinery-gray/20 mt-8 pt-6">
+      <div class="text-center sm:flex sm:items-center sm:justify-between space-y-3 sm:space-y-0">
+        <div class="text-aluminum/50 text-xs sm:text-sm">
+          <p>© {currentYear} Heavy Crane Insurance - A Division of Contractors Choice Agency</p>
         </div>
-        <div class="text-concrete-gray/50 text-sm text-center md:text-right">
-          <p>Chandler, AZ • Serving Nationwide</p>
-          <p class="mt-1">
-            <a href="/privacy" class="hover:text-construction-yellow transition-colors">Privacy Policy</a> • 
-            <a href="/terms" class="hover:text-construction-yellow transition-colors">Terms of Service</a>
-          </p>
+        <div class="text-aluminum/50 text-xs sm:text-sm flex flex-wrap justify-center sm:justify-end gap-4 sm:gap-6">
+          <span>Licensed in All 50 States</span>
+          <span>•</span>
+          <span>Established 2005</span>
+          <span>•</span>
+          <span>NPN: 8608479</span>
         </div>
       </div>
     </div>

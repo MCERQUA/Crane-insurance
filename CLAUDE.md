@@ -13,6 +13,9 @@ Heavy Crane Insurance website - A division of Contractors Choice Agency
 - **Email**: info@contractorschoiceagency.com  
 - **Hours**: Monday-Friday 9:00AM - 5:00PM (MST)
 - **Service Area**: Nationwide (United States)
+- **National Producer Number (NPN)**: 8608479
+- **Licensed in**: All 50 States
+- **Established**: 2005
 
 ## Core Services
 1. **General Liability Insurance** - $1M-$5M coverage limits for crane operations

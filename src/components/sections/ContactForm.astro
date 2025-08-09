@@ -20,6 +20,7 @@ import GlassButton from '../ui/GlassButton.tsx';
         method="POST" 
         data-netlify="true"
         netlify-honeypot="bot-field"
+        data-netlify-recaptcha="true"
         class="space-y-6"
       >
         <input type="hidden" name="form-name" value="crane-insurance-quote" />
@@ -259,6 +260,8 @@ import GlassButton from '../ui/GlassButton.tsx';
             </span>
           </label>
         </div>
+
+        <div data-netlify-recaptcha="true"></div>
         
         <div class="flex justify-center">
           <button

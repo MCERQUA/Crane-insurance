@@ -1,0 +1,20 @@
+{
+  "hooks": [
+    {
+      "name": "daily-article-creation",
+      "event": "ScheduledTask",
+      "command": "cd /home/mikecerqua/projects/Crane-insurance && claude /create-article topic-guide \"automated-daily-topic\" \"/blog/$(date +%Y/%m/%d)/daily-article\"",
+      "description": "Daily automated article creation using /create-article command",
+      "enabled": true,
+      "timeout": 300000
+    },
+    {
+      "name": "weekly-state-guide",
+      "event": "ScheduledTask", 
+      "command": "cd /home/mikecerqua/projects/Crane-insurance && claude /create-article state-guide \"$(shuf -n1 -e california texas florida new-york illinois)\" \"/blog/$(date +%Y/%m/%d)/weekly-state-guide\"",
+      "description": "Weekly state-specific insurance guide creation",
+      "enabled": false,
+      "timeout": 600000
+    }
+  ]
+}

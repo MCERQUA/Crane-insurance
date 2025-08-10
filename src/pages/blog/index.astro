@@ -11,25 +11,25 @@ const sortedPosts = posts.sort((a, b) =>
 );
 ---
 
-<BaseLayout title="Blog">
-  <div class="min-h-screen pt-32 pb-16 bg-light-gray">
+<BaseLayout title="Crane Insurance Blog | Expert Insights & Industry Updates">
+  <div class="min-h-screen pt-32 pb-16 bg-gradient-to-b from-charcoal/90 to-dark-steel">
     <div class="container-padding max-w-7xl mx-auto">
       <!-- Page Header -->
       <div class="text-center mb-16">
-        <h1 class="heading-xl text-espresso mb-6">
-          Our Blog
+        <h1 class="text-5xl md:text-6xl font-bold text-construction-yellow mb-6">
+          Industry Insights
         </h1>
-        <p class="body-text text-warm-gray max-w-3xl mx-auto">
-          Insights, tips, and stories about insulation and home comfort
+        <p class="text-xl text-aluminum/80 max-w-3xl mx-auto">
+          Expert guidance on crane insurance, compliance, and industry best practices
         </p>
       </div>
       
       <!-- Blog Grid -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {sortedPosts.map((post) => (
-          <article class="animate-slide-up">
-            <GlassCard client:visible variant="white">
-              <div class="space-y-4">
+          <article class="group">
+            <div class="bg-dark-steel/80 backdrop-blur-md rounded-3xl p-8 border border-construction-yellow/30 hover:border-construction-yellow/50 transition-all duration-300 hover:transform hover:scale-105">
+              <div class="space-y-6">
                 {post.data.image ? (
                   <img 
                     src={post.data.image} 
@@ -38,15 +38,15 @@ const sortedPosts = posts.sort((a, b) =>
                     loading="lazy"
                   />
                 ) : (
-                  <div class="aspect-video bg-gradient-to-br from-construction-yellow/20 to-machinery-gray/20 rounded-2xl flex items-center justify-center">
-                    <svg class="w-12 h-12 text-construction-yellow/50" fill="currentColor" viewBox="0 0 20 20">
+                  <div class="aspect-video bg-gradient-to-br from-construction-yellow/20 to-charcoal/20 rounded-2xl flex items-center justify-center border border-construction-yellow/20">
+                    <svg class="w-16 h-16 text-construction-yellow/50" fill="currentColor" viewBox="0 0 20 20">
                       <path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clip-rule="evenodd" />
                     </svg>
                   </div>
                 )}
                 
-                <div class="space-y-3">
-                  <div class="flex items-center gap-4 text-sm text-warm-gray">
+                <div class="space-y-4">
+                  <div class="flex items-center gap-4 text-sm text-aluminum/60">
                     <time datetime={post.data.pubDate.toISOString()}>
                       {new Date(post.data.pubDate).toLocaleDateString('en-US', {
                         year: 'numeric',
@@ -54,22 +54,22 @@ const sortedPosts = posts.sort((a, b) =>
                         day: 'numeric'
                       })}
                     </time>
-                    <span class="text-khaki">•</span>
+                    <span class="text-construction-yellow">•</span>
                     <span>{post.data.readTime || '5 min read'}</span>
                   </div>
                   
-                  <h2 class="text-2xl font-bold text-espresso">
+                  <h2 class="text-2xl font-bold text-construction-yellow group-hover:text-construction-yellow/90 transition-colors">
                     {post.data.title}
                   </h2>
                   
-                  <p class="text-warm-gray">
+                  <p class="text-aluminum/80 leading-relaxed">
                     {post.data.description}
                   </p>
                   
                   {post.data.tags && (
                     <div class="flex flex-wrap gap-2">
                       {post.data.tags.map((tag: string) => (
-                        <span class="text-xs px-2 py-1 bg-sand/30 rounded-full text-taupe">
+                        <span class="text-xs px-3 py-1 bg-construction-yellow/10 border border-construction-yellow/30 rounded-full text-construction-yellow">
                           {tag}
                         </span>
                       ))}
@@ -77,26 +77,28 @@ const sortedPosts = posts.sort((a, b) =>
                   )}
                 </div>
                 
-                <GlassButton
+                <a
                   href={`/blog/${post.slug}`}
-                  size="sm"
-                  variant="outline"
-                  className="w-full"
-                  client:visible
+                  class="inline-flex items-center gap-2 px-6 py-3 bg-construction-yellow hover:bg-construction-yellow/90 text-dark-steel font-bold rounded-xl transition-all duration-300 hover:transform hover:scale-105"
                 >
-                  Read More
-                </GlassButton>
+                  Read Article
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                  </svg>
+                </a>
               </div>
-            </GlassCard>
+            </div>
           </article>
         ))}
       </div>
       
       {sortedPosts.length === 0 && (
         <div class="text-center py-20">
-          <p class="text-xl text-warm-gray">
-            No blog posts yet. Check back soon!
-          </p>
+          <div class="bg-dark-steel/60 backdrop-blur-md rounded-3xl p-12 border border-construction-yellow/30">
+            <p class="text-xl text-aluminum/80">
+              Expert insights coming soon! Check back for industry updates and crane insurance guidance.
+            </p>
+          </div>
         </div>
       )}
     </div>

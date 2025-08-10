@@ -53,6 +53,7 @@ Heavy Crane Insurance website - A division of Contractors Choice Agency
 - Validate all inputs before processing  
 - Use proper null/undefined checks
 - Apply `!important` prefix for critical button styles to prevent CSS inheritance
+- **CRITICAL TEXT STYLING**: Always add black text outlines to light text on light backgrounds for readability using: `style="text-shadow: 0 0 3px rgba(0, 0, 0, 0.8), 0 1px 4px rgba(0, 0, 0, 0.6), 1px 1px 0 rgba(0, 0, 0, 0.8), -1px -1px 0 rgba(0, 0, 0, 0.8), 1px -1px 0 rgba(0, 0, 0, 0.8), -1px 1px 0 rgba(0, 0, 0, 0.8)"`
 
 ### 3. Testing Requirements
 **CRITICAL**: Local `npm run build` success does NOT guarantee Netlify deployment success.

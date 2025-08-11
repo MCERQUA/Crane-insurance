@@ -4,6 +4,18 @@ export default {
     './src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}',
     './node_modules/@astrojs/tailwind/**/*.js',
   ],
+  safelist: [
+    'quick-answer',
+    'blog-content',
+    'info-box',
+    'blog-feature-card',
+    'pull-quote',
+    'key-points',
+    'key-points-title',
+    'blog-highlight',
+    'blog-divider',
+    'info-box-title',
+  ],
   theme: {
     extend: {
       colors: {
@@ -27,6 +39,16 @@ export default {
         // Functional colors
         'crane-yellow': '#FFEB3B',          // Crane highlight yellow
         'safety-orange': '#FF5722',         // Safety equipment orange
+        
+        // Blog Styling Colors (warm professional tones)
+        'cream': '#FAF7F2',                 // Light cream background
+        'sand': '#C8B89E',                  // Sand/beige accent
+        'terra-cotta': '#D2691E',           // Terra cotta/rust orange
+        'khaki': '#BDB76B',                 // Khaki green-brown
+        'warm-gray': '#8B7355',             // Warm gray text
+        'espresso': '#3E2723',              // Dark espresso brown
+        'taupe': '#483C32',                 // Taupe brown
+        'light-gray': '#F5F5F5',            // Light background gray
       },
       fontFamily: {
         'sans': ['Inter', 'sans-serif'],

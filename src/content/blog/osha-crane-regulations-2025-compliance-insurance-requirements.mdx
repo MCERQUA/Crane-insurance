@@ -28,14 +28,12 @@ schema:
 import { Callout } from '@components/ui/Callout'
 import { Stats } from '@components/ui/Stats'
 
-<div className="quick-answer" itemScope itemType="https://schema.org/Question">
-  <h2 itemProp="name" className="text-xl font-bold mb-2">Quick Answer: What Are OSHA Crane Regulations?</h2>
-  <div itemProp="acceptedAnswer" itemScope itemType="https://schema.org/Answer">
-    <div itemProp="text">
-      OSHA crane regulations (29 CFR 1926 Subpart CC) are comprehensive safety standards governing crane operations in construction. Key requirements include operator certification (renewed every 5 years), daily/monthly/annual inspections, 20+ feet clearance from power lines, and signal person qualifications. Violations can result in penalties up to $161,323 and impact insurance coverage.
-    </div>
-  </div>
-</div>
+<Callout type="info">
+  <h2 className="text-xl font-bold mb-2" style="text-shadow: 0 0 3px rgba(0,0,0,0.8), 0 1px 4px rgba(0,0,0,0.6), 1px 1px 0 rgba(0,0,0,0.8), -1px -1px 0 rgba(0,0,0,0.8), 1px -1px 0 rgba(0,0,0,0.8), -1px 1px 0 rgba(0,0,0,0.8)">Quick Answer: What Are OSHA Crane Regulations?</h2>
+  <p style="text-shadow: 0 0 3px rgba(0,0,0,0.8), 0 1px 4px rgba(0,0,0,0.6), 1px 1px 0 rgba(0,0,0,0.8), -1px -1px 0 rgba(0,0,0,0.8), 1px -1px 0 rgba(0,0,0,0.8), -1px 1px 0 rgba(0,0,0,0.8)">
+    OSHA crane regulations (29 CFR 1926 Subpart CC) are comprehensive safety standards governing crane operations in construction. Key requirements include operator certification (renewed every 5 years), daily/monthly/annual inspections, 20+ feet clearance from power lines, and signal person qualifications. Violations can result in penalties up to $161,323 and impact insurance coverage.
+  </p>
+</Callout>
 
 OSHA crane regulations under 29 CFR 1926 Subpart CC represent some of the most comprehensive safety standards in the construction industry, affecting everything from daily operations to insurance coverage. With penalty amounts increasing to over $165,000 for willful violations in 2025, understanding and maintaining compliance isn't just about safety—it's essential for protecting your business from devastating financial consequences.
 
@@ -43,12 +41,14 @@ This comprehensive guide examines every aspect of OSHA crane regulations as they
 
 <Stats
   stats={[
-    { value: "$161,323", label: "Max Violation", description: "Willful/repeated violation penalty" },
+    { value: "$165,514", label: "Max Violation", description: "Willful/repeated violation penalty" },
     { value: "5 Years", label: "Certification Period", description: "NCCCO certification validity" },
     { value: "20 Feet", label: "Power Line Clearance", description: "Minimum safe distance required" },
     { value: "29 CFR 1926", label: "Regulation Code", description: "OSHA Subpart CC standards" }
   ]}
 />
+
+---
 
 ## Understanding OSHA Crane Regulations: 29 CFR 1926 Subpart CC
 
@@ -56,28 +56,48 @@ OSHA's crane regulations, codified as 29 CFR 1926 Subpart CC, establish comprehe
 
 ### Scope and Application
 
-**Covered Equipment**: The regulations apply to all cranes and derricks used in construction, including:
-- Mobile cranes (truck-mounted, rough-terrain, all-terrain)
-- Tower cranes (both fixed and mobile types)
-- Derricks and specialized lifting equipment
-- Crawler cranes and lattice boom equipment
+<Callout type="info">
+  <h4 style="text-shadow: 0 0 3px rgba(0,0,0,0.8), 0 1px 4px rgba(0,0,0,0.6), 1px 1px 0 rgba(0,0,0,0.8), -1px -1px 0 rgba(0,0,0,0.8), 1px -1px 0 rgba(0,0,0,0.8), -1px 1px 0 rgba(0,0,0,0.8)">Covered Equipment</h4>
+  <p style="text-shadow: 0 0 3px rgba(0,0,0,0.8), 0 1px 4px rgba(0,0,0,0.6), 1px 1px 0 rgba(0,0,0,0.8), -1px -1px 0 rgba(0,0,0,0.8), 1px -1px 0 rgba(0,0,0,0.8), -1px 1px 0 rgba(0,0,0,0.8)">The regulations apply to all cranes and derricks used in construction:</p>
+  <ul style="text-shadow: 0 0 3px rgba(0,0,0,0.8), 0 1px 4px rgba(0,0,0,0.6), 1px 1px 0 rgba(0,0,0,0.8), -1px -1px 0 rgba(0,0,0,0.8), 1px -1px 0 rgba(0,0,0,0.8), -1px 1px 0 rgba(0,0,0,0.8)">
+    <li>Mobile cranes (truck-mounted, rough-terrain, all-terrain)</li>
+    <li>Tower cranes (both fixed and mobile types)</li>
+    <li>Derricks and specialized lifting equipment</li>
+    <li>Crawler cranes and lattice boom equipment</li>
+  </ul>
+</Callout>
 
-**Operational Coverage**: OSHA standards govern:
-- Equipment assembly, operation, and disassembly procedures
-- Operator qualification and certification requirements
-- Daily, monthly, and annual inspection protocols
-- Site safety and hazard management procedures
-- Signal person requirements and communication protocols
+<Callout type="tip">
+  <h4 style="text-shadow: 0 0 3px rgba(0,0,0,0.8), 0 1px 4px rgba(0,0,0,0.6), 1px 1px 0 rgba(0,0,0,0.8), -1px -1px 0 rgba(0,0,0,0.8), 1px -1px 0 rgba(0,0,0,0.8), -1px 1px 0 rgba(0,0,0,0.8)">Operational Coverage</h4>
+  <p style="text-shadow: 0 0 3px rgba(0,0,0,0.8), 0 1px 4px rgba(0,0,0,0.6), 1px 1px 0 rgba(0,0,0,0.8), -1px -1px 0 rgba(0,0,0,0.8), 1px -1px 0 rgba(0,0,0,0.8), -1px 1px 0 rgba(0,0,0,0.8)">OSHA standards govern these critical areas:</p>
+  <ul style="text-shadow: 0 0 3px rgba(0,0,0,0.8), 0 1px 4px rgba(0,0,0,0.6), 1px 1px 0 rgba(0,0,0,0.8), -1px -1px 0 rgba(0,0,0,0.8), 1px -1px 0 rgba(0,0,0,0.8), -1px 1px 0 rgba(0,0,0,0.8)">
+    <li>Equipment assembly, operation, and disassembly procedures</li>
+    <li>Operator qualification and certification requirements</li>
+    <li>Daily, monthly, and annual inspection protocols</li>
+    <li>Site safety and hazard management procedures</li>
+    <li>Signal person requirements and communication protocols</li>
+  </ul>
+</Callout>
 
 ### 2025 Regulatory Status
 
-**Current Standards**: No major revisions to 29 CFR 1926 Subpart CC were implemented in 2025, meaning the existing comprehensive framework remains in effect. However, OSHA's enforcement priorities and penalty structures have been updated to reflect current economic conditions and safety priorities.
+<Callout type="success">
+  <h4 style="text-shadow: 0 0 3px rgba(0,0,0,0.8), 0 1px 4px rgba(0,0,0,0.6), 1px 1px 0 rgba(0,0,0,0.8), -1px -1px 0 rgba(0,0,0,0.8), 1px -1px 0 rgba(0,0,0,0.8), -1px 1px 0 rgba(0,0,0,0.8)">Current Standards</h4>
+  <p style="text-shadow: 0 0 3px rgba(0,0,0,0.8), 0 1px 4px rgba(0,0,0,0.6), 1px 1px 0 rgba(0,0,0,0.8), -1px -1px 0 rgba(0,0,0,0.8), 1px -1px 0 rgba(0,0,0,0.8), -1px 1px 0 rgba(0,0,0,0.8)">No major revisions to 29 CFR 1926 Subpart CC were implemented in 2025, meaning the existing comprehensive framework remains in effect. However, OSHA's enforcement priorities and penalty structures have been updated to reflect current economic conditions and safety priorities.</p>
+</Callout>
 
-**Enforcement Evolution**: While the regulations themselves remain stable, OSHA's enforcement approach continues evolving with enhanced focus on:
-- Technology integration for safety monitoring
-- Documentation and record-keeping compliance
-- Training program adequacy and effectiveness
-- Systematic safety program implementation
+<Callout type="warning">
+  <h4 style="color: #92400e">Enforcement Evolution</h4>
+  <p style="color: #92400e">While the regulations themselves remain stable, OSHA's enforcement approach continues evolving with enhanced focus on:</p>
+  <ul style="color: #92400e">
+    <li>Technology integration for safety monitoring</li>
+    <li>Documentation and record-keeping compliance</li>
+    <li>Training program adequacy and effectiveness</li>
+    <li>Systematic safety program implementation</li>
+  </ul>
+</Callout>
+
+---
 
 ## Operator Certification and Qualification Requirements
 
@@ -87,48 +107,75 @@ One of the most significant aspects of OSHA crane regulations involves operator 
 
 **National Commission for the Certification of Crane Operators (NCCCO)** provides the primary pathway for OSHA-compliant operator certification:
 
-**Age and Basic Requirements**:
-- Minimum 18 years old for certification eligibility
-- Physical ability to operate equipment safely
-- Ability to read, write, and understand English at functional level
-- Clear understanding of crane operations and safety principles
+<Callout type="info">
+  <h4 style="text-shadow: 0 0 3px rgba(0,0,0,0.8), 0 1px 4px rgba(0,0,0,0.6), 1px 1px 0 rgba(0,0,0,0.8), -1px -1px 0 rgba(0,0,0,0.8), 1px -1px 0 rgba(0,0,0,0.8), -1px 1px 0 rgba(0,0,0,0.8)">Age and Basic Requirements</h4>
+  <ul style="text-shadow: 0 0 3px rgba(0,0,0,0.8), 0 1px 4px rgba(0,0,0,0.6), 1px 1px 0 rgba(0,0,0,0.8), -1px -1px 0 rgba(0,0,0,0.8), 1px -1px 0 rgba(0,0,0,0.8), -1px 1px 0 rgba(0,0,0,0.8)">
+    <li><strong>Minimum 18 years old</strong> for certification eligibility</li>
+    <li><strong>Physical ability</strong> to operate equipment safely</li>
+    <li><strong>English proficiency</strong> - read, write, and understand at functional level</li>
+    <li><strong>Clear understanding</strong> of crane operations and safety principles</li>
+  </ul>
+</Callout>
 
-**Examination Process**:
-- **Written Examination**: Comprehensive test covering crane operations, safety procedures, and regulatory requirements
-- **Practical Assessment**: Hands-on evaluation of operational competency using actual equipment
-- **Time Limits**: One-year window to complete both examinations successfully
-- **Validity Period**: Certifications remain valid for five years from issue date
+<Stats
+  stats={[
+    { value: "Written Exam", label: "First Step", description: "Comprehensive operations test" },
+    { value: "Practical Test", label: "Second Step", description: "Hands-on equipment evaluation" },
+    { value: "1 Year", label: "Time Window", description: "Complete both exams" },
+    { value: "5 Years", label: "Valid Period", description: "Certification validity" }
+  ]}
+/>
 
 ### OSHA Recognition and Employer Obligations
 
 **Official OSHA Recognition**: NCCCO certification meets OSHA requirements for operator qualification, but employers retain additional responsibilities:
 
-**Employer Assessment Requirements**:
-- Verify operator certification currency and validity
-- Assess operator competency on specific equipment types
-- Evaluate operator performance in actual work environments
-- Document ongoing competency assessments and evaluations
+<Callout type="warning">
+  <h4 style="color: #92400e">Employer Assessment Requirements</h4>
+  <ul style="color: #92400e">
+    <li><strong>Verify certification</strong> - Check currency and validity</li>
+    <li><strong>Assess competency</strong> - Evaluate on specific equipment types</li>
+    <li><strong>Work environment</strong> - Test performance in actual conditions</li>
+    <li><strong>Document everything</strong> - Maintain ongoing assessment records</li>
+  </ul>
+</Callout>
 
-**Site-Specific Requirements**:
-- Operators must demonstrate competency on specific crane models
-- Site conditions may require additional qualification assessments
-- Employers must ensure operators understand job-specific hazards
-- Documentation of all assessments must be maintained on-site
+<Callout type="info">
+  <h4 style="text-shadow: 0 0 3px rgba(0,0,0,0.8), 0 1px 4px rgba(0,0,0,0.6), 1px 1px 0 rgba(0,0,0,0.8), -1px -1px 0 rgba(0,0,0,0.8), 1px -1px 0 rgba(0,0,0,0.8), -1px 1px 0 rgba(0,0,0,0.8)">Site-Specific Requirements</h4>
+  <ul style="text-shadow: 0 0 3px rgba(0,0,0,0.8), 0 1px 4px rgba(0,0,0,0.6), 1px 1px 0 rgba(0,0,0,0.8), -1px -1px 0 rgba(0,0,0,0.8), 1px -1px 0 rgba(0,0,0,0.8), -1px 1px 0 rgba(0,0,0,0.8)">
+    <li>Operators must demonstrate competency on specific crane models</li>
+    <li>Site conditions may require additional qualification assessments</li>
+    <li>Employers must ensure operators understand job-specific hazards</li>
+    <li>Documentation of all assessments must be maintained on-site</li>
+  </ul>
+</Callout>
 
 ### Multi-Crane and Specialty Certifications
 
-**Crane Type Specifications**: NCCCO offers certifications for different crane categories:
-- **Mobile Crane Certification**: Covers truck-mounted and rough-terrain equipment
-- **Tower Crane Certification**: Specific to fixed and mobile tower operations
-- **Lattice Boom Crawler**: Specialized certification for lattice boom equipment
-- **Overhead Crane Certification**: For industrial overhead crane operations
+<Stats
+  stats={[
+    { value: "Mobile Crane", label: "Standard Cert", description: "Truck-mounted & rough-terrain" },
+    { value: "Tower Crane", label: "Fixed/Mobile", description: "Tower operation specific" },
+    { value: "Lattice Boom", label: "Crawler Type", description: "Specialized lattice boom" },
+    { value: "Overhead Crane", label: "Industrial", description: "Industrial overhead ops" }
+  ]}
+/>
 
-**Specialty Endorsements**:
-- **Rigger Certification**: Required for personnel directing load handling
-- **Signal Person Certification**: Mandatory for communication specialists
-- **Assembly/Disassembly Certification**: Specialized for complex erection operations
+<Callout type="tip">
+  <h4 style="text-shadow: 0 0 3px rgba(0,0,0,0.8), 0 1px 4px rgba(0,0,0,0.6), 1px 1px 0 rgba(0,0,0,0.8), -1px -1px 0 rgba(0,0,0,0.8), 1px -1px 0 rgba(0,0,0,0.8), -1px 1px 0 rgba(0,0,0,0.8)">Specialty Endorsements</h4>
+  <ul style="text-shadow: 0 0 3px rgba(0,0,0,0.8), 0 1px 4px rgba(0,0,0,0.6), 1px 1px 0 rgba(0,0,0,0.8), -1px -1px 0 rgba(0,0,0,0.8), 1px -1px 0 rgba(0,0,0,0.8), -1px 1px 0 rgba(0,0,0,0.8)">
+    <li><strong>Rigger Certification</strong> - Required for personnel directing load handling</li>
+    <li><strong>Signal Person Certification</strong> - Mandatory for communication specialists</li>
+    <li><strong>Assembly/Disassembly Certification</strong> - Specialized for complex erection operations</li>
+  </ul>
+</Callout>
 
-> **Insurance Impact**: Operators without current, appropriate certifications can void insurance coverage entirely. Insurance companies increasingly audit certification records and may deny claims when uncertified operators are involved in incidents.
+<Callout type="warning">
+  <h4 style="color: #92400e">⚠️ Insurance Impact</h4>
+  <p style="color: #92400e"><strong>Critical Warning:</strong> Operators without current, appropriate certifications can void insurance coverage entirely. Insurance companies increasingly audit certification records and may deny claims when uncertified operators are involved in incidents.</p>
+</Callout>
+
+---
 
 ## Equipment Inspection and Maintenance Standards
 
@@ -136,49 +183,86 @@ OSHA requires comprehensive inspection programs that directly impact both safety
 
 ### Daily Inspection Requirements (Section 1926.1412)
 
-**Pre-Shift Inspection Protocol**:
-Every shift before equipment use requires thorough visual inspection by a competent person covering:
+**Pre-Shift Inspection Protocol**: Every shift before equipment use requires thorough visual inspection by a competent person covering:
 
-**Structural Components**:
-- Boom, jib, and structural member condition
-- Outrigger float condition and stability
-- Crawler track or tire condition and pressure
-- Visible signs of damage, wear, or deterioration
+<Callout type="info">
+  <h4 style="text-shadow: 0 0 3px rgba(0,0,0,0.8), 0 1px 4px rgba(0,0,0,0.6), 1px 1px 0 rgba(0,0,0,0.8), -1px -1px 0 rgba(0,0,0,0.8), 1px -1px 0 rgba(0,0,0,0.8), -1px 1px 0 rgba(0,0,0,0.8)">🔧 Structural Components</h4>
+  <ul style="text-shadow: 0 0 3px rgba(0,0,0,0.8), 0 1px 4px rgba(0,0,0,0.6), 1px 1px 0 rgba(0,0,0,0.8), -1px -1px 0 rgba(0,0,0,0.8), 1px -1px 0 rgba(0,0,0,0.8), -1px 1px 0 rgba(0,0,0,0.8)">
+    <li>Boom, jib, and structural member condition</li>
+    <li>Outrigger float condition and stability</li>
+    <li>Crawler track or tire condition and pressure</li>
+    <li>Visible signs of damage, wear, or deterioration</li>
+  </ul>
+</Callout>
 
-**Operating Systems**:
-- Hydraulic system leaks, hose condition, and fluid levels
-- Wire rope condition including broken wires and proper spooling
-- Hook and load block condition including safety latches
-- All gauges, warning devices, and operator controls
+<Callout type="tip">
+  <h4 style="text-shadow: 0 0 3px rgba(0,0,0,0.8), 0 1px 4px rgba(0,0,0,0.6), 1px 1px 0 rgba(0,0,0,0.8), -1px -1px 0 rgba(0,0,0,0.8), 1px -1px 0 rgba(0,0,0,0.8), -1px 1px 0 rgba(0,0,0,0.8)">⚙️ Operating Systems</h4>
+  <ul style="text-shadow: 0 0 3px rgba(0,0,0,0.8), 0 1px 4px rgba(0,0,0,0.6), 1px 1px 0 rgba(0,0,0,0.8), -1px -1px 0 rgba(0,0,0,0.8), 1px -1px 0 rgba(0,0,0,0.8), -1px 1px 0 rgba(0,0,0,0.8)">
+    <li>Hydraulic system leaks, hose condition, and fluid levels</li>
+    <li>Wire rope condition including broken wires and proper spooling</li>
+    <li>Hook and load block condition including safety latches</li>
+    <li>All gauges, warning devices, and operator controls</li>
+  </ul>
+</Callout>
 
-**Safety Systems**:
-- Load moment indicator or rated capacity indicator functionality
-- Anti-two block system operation and condition
-- Swing brake and travel brake operation
-- Warning devices and backup alarms
+<Callout type="success">
+  <h4 style="text-shadow: 0 0 3px rgba(0,0,0,0.8), 0 1px 4px rgba(0,0,0,0.6), 1px 1px 0 rgba(0,0,0,0.8), -1px -1px 0 rgba(0,0,0,0.8), 1px -1px 0 rgba(0,0,0,0.8), -1px 1px 0 rgba(0,0,0,0.8)">🛡️ Safety Systems</h4>
+  <ul style="text-shadow: 0 0 3px rgba(0,0,0,0.8), 0 1px 4px rgba(0,0,0,0.6), 1px 1px 0 rgba(0,0,0,0.8), -1px -1px 0 rgba(0,0,0,0.8), 1px -1px 0 rgba(0,0,0,0.8), -1px 1px 0 rgba(0,0,0,0.8)">
+    <li>Load moment indicator or rated capacity indicator functionality</li>
+    <li>Anti-two block system operation and condition</li>
+    <li>Swing brake and travel brake operation</li>
+    <li>Warning devices and backup alarms</li>
+  </ul>
+</Callout>
 
-**Documentation Requirements**:
-- Daily inspection checklists must be completed and signed
-- Any deficiencies must be documented and addressed before operation
-- Records must be available for review by competent persons
-- Equipment with identified hazards must be removed from service immediately
+<Callout type="warning">
+  <h4 style="color: #92400e">📋 Documentation Requirements</h4>
+  <ul style="color: #92400e">
+    <li><strong>Daily checklists</strong> must be completed and signed</li>
+    <li><strong>Any deficiencies</strong> must be documented before operation</li>
+    <li><strong>Records available</strong> for review by competent persons</li>
+    <li><strong>Hazardous equipment</strong> removed from service immediately</li>
+  </ul>
+</Callout>
 
 ### Periodic Inspection Standards
 
-**Monthly Inspections**: More detailed evaluations covering:
-- Items included in daily inspections with greater detail
-- Load block and hook inspection for cracks or deformation
-- Wire rope inspection including internal condition assessment
-- Hydraulic system detailed inspection including filter condition
-- Electrical system inspection including insulation and connections
+<Stats
+  stats={[
+    { value: "Monthly", label: "Detailed Check", description: "Enhanced inspection items" },
+    { value: "Annual", label: "Comprehensive", description: "Full system evaluation" },
+    { value: "3+ Months", label: "Idle Equipment", description: "Return-to-service inspection" },
+    { value: "Professional", label: "Qualified Person", description: "Expertise required" }
+  ]}
+/>
 
-**Annual Inspections**: Comprehensive evaluations potentially requiring:
-- Disassembly of critical components for internal inspection
-- Non-destructive testing of structural components when indicated
-- Load testing to verify capacity and safety system operation
-- Professional inspection by qualified persons with appropriate expertise
+<Callout type="info">
+  <h4 style="text-shadow: 0 0 3px rgba(0,0,0,0.8), 0 1px 4px rgba(0,0,0,0.6), 1px 1px 0 rgba(0,0,0,0.8), -1px -1px 0 rgba(0,0,0,0.8), 1px -1px 0 rgba(0,0,0,0.8), -1px 1px 0 rgba(0,0,0,0.8)">📅 Monthly Inspections</h4>
+  <p style="text-shadow: 0 0 3px rgba(0,0,0,0.8), 0 1px 4px rgba(0,0,0,0.6), 1px 1px 0 rgba(0,0,0,0.8), -1px -1px 0 rgba(0,0,0,0.8), 1px -1px 0 rgba(0,0,0,0.8), -1px 1px 0 rgba(0,0,0,0.8)">More detailed evaluations covering:</p>
+  <ul style="text-shadow: 0 0 3px rgba(0,0,0,0.8), 0 1px 4px rgba(0,0,0,0.6), 1px 1px 0 rgba(0,0,0,0.8), -1px -1px 0 rgba(0,0,0,0.8), 1px -1px 0 rgba(0,0,0,0.8), -1px 1px 0 rgba(0,0,0,0.8)">
+    <li>Items included in daily inspections with greater detail</li>
+    <li>Load block and hook inspection for cracks or deformation</li>
+    <li>Wire rope inspection including internal condition assessment</li>
+    <li>Hydraulic system detailed inspection including filter condition</li>
+    <li>Electrical system inspection including insulation and connections</li>
+  </ul>
+</Callout>
 
-**Idle Equipment Protocol**: Equipment idle for three or more months requires qualified person inspection before returning to service, covering all annual inspection items.
+<Callout type="warning">
+  <h4 style="color: #92400e">📋 Annual Inspections</h4>
+  <p style="color: #92400e">Comprehensive evaluations potentially requiring:</p>
+  <ul style="color: #92400e">
+    <li><strong>Component disassembly</strong> for internal inspection</li>
+    <li><strong>Non-destructive testing</strong> of structural components when indicated</li>
+    <li><strong>Load testing</strong> to verify capacity and safety system operation</li>
+    <li><strong>Professional inspection</strong> by qualified persons with appropriate expertise</li>
+  </ul>
+</Callout>
+
+<Callout type="success">
+  <h4 style="text-shadow: 0 0 3px rgba(0,0,0,0.8), 0 1px 4px rgba(0,0,0,0.6), 1px 1px 0 rgba(0,0,0,0.8), -1px -1px 0 rgba(0,0,0,0.8), 1px -1px 0 rgba(0,0,0,0.8), -1px 1px 0 rgba(0,0,0,0.8)">⏱️ Idle Equipment Protocol</h4>
+  <p style="text-shadow: 0 0 3px rgba(0,0,0,0.8), 0 1px 4px rgba(0,0,0,0.6), 1px 1px 0 rgba(0,0,0,0.8), -1px -1px 0 rgba(0,0,0,0.8), 1px -1px 0 rgba(0,0,0,0.8), -1px 1px 0 rgba(0,0,0,0.8)">Equipment idle for three or more months requires qualified person inspection before returning to service, covering all annual inspection items.</p>
+</Callout>
 
 ### Load Rating and Capacity Management
 
@@ -239,21 +323,43 @@ OSHA requires establishment of controlled access zones around crane operations:
 
 Power line safety represents one of the most critical aspects of OSHA crane regulations, with approximately 100 crane-power line contacts occurring annually in the United States.
 
-**Minimum Clearance Requirements**:
-- **20 feet** minimum for most operations
-- **10 feet + 0.4 inch per kilovolt over 50kV** for higher voltage lines
-- **6-inch minimum** when voltage is confirmed under 350 volts
+<Stats
+  stats={[
+    { value: "20 Feet", label: "Minimum Distance", description: "Standard clearance requirement" },
+    { value: "100+", label: "Annual Contacts", description: "Crane-power line incidents" },
+    { value: "350 Volts", label: "Low Voltage", description: "6-inch minimum clearance" },
+    { value: "50kV+", label: "High Voltage", description: "Additional clearance required" }
+  ]}
+/>
 
-**Presumed Energized Protocol**: All power lines must be treated as energized unless:
-- Utility company confirms de-energization and provides written verification
-- Power lines are visually grounded with proper equipment
-- Lockout/tagout procedures are properly implemented and documented
+<Callout type="warning">
+  <h4 style="color: #92400e">⚡ Critical Clearance Requirements</h4>
+  <ul style="color: #92400e">
+    <li><strong>20 feet minimum</strong> for most operations</li>
+    <li><strong>10 feet + 0.4 inch per kilovolt over 50kV</strong> for higher voltage lines</li>
+    <li><strong>6-inch minimum</strong> when voltage is confirmed under 350 volts</li>
+  </ul>
+</Callout>
 
-**Required Safety Measures**:
-- **Dedicated Spotters**: Required when operating within 20 feet of power lines
-- **Proximity Alarms**: Electronic warning systems when working near electrical hazards
-- **Insulating Covers**: Physical barriers over power lines when feasible
-- **Emergency Procedures**: Established protocols for electrical contact incidents
+<Callout type="info">
+  <h4 style="text-shadow: 0 0 3px rgba(0,0,0,0.8), 0 1px 4px rgba(0,0,0,0.6), 1px 1px 0 rgba(0,0,0,0.8), -1px -1px 0 rgba(0,0,0,0.8), 1px -1px 0 rgba(0,0,0,0.8), -1px 1px 0 rgba(0,0,0,0.8)">🔌 Presumed Energized Protocol</h4>
+  <p style="text-shadow: 0 0 3px rgba(0,0,0,0.8), 0 1px 4px rgba(0,0,0,0.6), 1px 1px 0 rgba(0,0,0,0.8), -1px -1px 0 rgba(0,0,0,0.8), 1px -1px 0 rgba(0,0,0,0.8), -1px 1px 0 rgba(0,0,0,0.8)">All power lines must be treated as energized unless:</p>
+  <ul style="text-shadow: 0 0 3px rgba(0,0,0,0.8), 0 1px 4px rgba(0,0,0,0.6), 1px 1px 0 rgba(0,0,0,0.8), -1px -1px 0 rgba(0,0,0,0.8), 1px -1px 0 rgba(0,0,0,0.8), -1px 1px 0 rgba(0,0,0,0.8)">
+    <li>Utility company confirms de-energization with written verification</li>
+    <li>Power lines are visually grounded with proper equipment</li>
+    <li>Lockout/tagout procedures are properly implemented and documented</li>
+  </ul>
+</Callout>
+
+<Callout type="success">
+  <h4 style="text-shadow: 0 0 3px rgba(0,0,0,0.8), 0 1px 4px rgba(0,0,0,0.6), 1px 1px 0 rgba(0,0,0,0.8), -1px -1px 0 rgba(0,0,0,0.8), 1px -1px 0 rgba(0,0,0,0.8), -1px 1px 0 rgba(0,0,0,0.8)">🛡️ Required Safety Measures</h4>
+  <ul style="text-shadow: 0 0 3px rgba(0,0,0,0.8), 0 1px 4px rgba(0,0,0,0.6), 1px 1px 0 rgba(0,0,0,0.8), -1px -1px 0 rgba(0,0,0,0.8), 1px -1px 0 rgba(0,0,0,0.8), -1px 1px 0 rgba(0,0,0,0.8)">
+    <li><strong>Dedicated Spotters</strong> - Required within 20 feet of power lines</li>
+    <li><strong>Proximity Alarms</strong> - Electronic warning systems for electrical hazards</li>
+    <li><strong>Insulating Covers</strong> - Physical barriers over power lines when feasible</li>
+    <li><strong>Emergency Procedures</strong> - Established protocols for electrical contact incidents</li>
+  </ul>
+</Callout>
 
 ### Signal Person Requirements (Section 1926.1428)
 
@@ -321,38 +427,69 @@ Assembly and disassembly operations present some of the highest risks in crane o
 - Signal persons must be certified for assembly operations
 - A/D Directors must maintain current qualification status
 
+---
+
 ## 2025 OSHA Penalty Structure and Enforcement
 
 Understanding OSHA's current penalty structure helps illustrate the financial importance of maintaining compliance, particularly as these penalties directly impact insurance coverage and business viability.
 
 ### Updated Penalty Amounts (Effective January 15, 2025)
 
-**Serious and Other-than-Serious Violations**:
-- Maximum penalty: $16,550 per violation (increased 2.6% from 2024)
-- Represents violations with substantial probability of death or serious physical harm
-- Each identified hazard can result in separate violation
+<Stats
+  stats={[
+    { value: "$16,550", label: "Serious Violations", description: "Maximum penalty per violation" },
+    { value: "$165,514", label: "Willful/Repeated", description: "Maximum penalty per violation" },
+    { value: "2.6%", label: "2025 Increase", description: "Annual penalty adjustment" },
+    { value: "3 Years", label: "Repeat Window", description: "Previous citation lookback" }
+  ]}
+/>
 
-**Willful and Repeated Violations**:
-- Maximum penalty: $165,514 per violation (increased 2.6% from 2024) 
-- Willful violations involve intentional disregard for requirements
-- Repeated violations occur within three years of previous citation
+<Callout type="warning">
+  <h4 style="color: #92400e">💰 Serious and Other-than-Serious Violations</h4>
+  <ul style="color: #92400e">
+    <li><strong>Maximum penalty: $16,550</strong> per violation (increased 2.6% from 2024)</li>
+    <li><strong>Substantial probability</strong> of death or serious physical harm</li>
+    <li><strong>Separate violations</strong> - Each identified hazard can result in individual penalty</li>
+  </ul>
+</Callout>
+
+<Callout type="warning">
+  <h4 style="color: #92400e">⚠️ Willful and Repeated Violations</h4>
+  <ul style="color: #92400e">
+    <li><strong>Maximum penalty: $165,514</strong> per violation (increased 2.6% from 2024)</li>
+    <li><strong>Willful violations</strong> - Intentional disregard for requirements</li>
+    <li><strong>Repeated violations</strong> - Occur within three years of previous citation</li>
+  </ul>
+</Callout>
 
 ### Gravity-Based Penalty Assessment
 
-**High Gravity Violations**: $16,550 maximum penalty for:
-- Serious violations with high probability of severe injury or death
-- Multiple employees exposed to hazards
-- Clear regulatory requirements ignored or violated
+<Callout type="warning">
+  <h4 style="color: #92400e">🔴 High Gravity Violations - $16,550 Maximum</h4>
+  <ul style="color: #92400e">
+    <li><strong>High probability</strong> of severe injury or death</li>
+    <li><strong>Multiple employees</strong> exposed to hazards</li>
+    <li><strong>Clear requirements</strong> ignored or violated</li>
+  </ul>
+</Callout>
 
-**Moderate Gravity Violations**: $9,457 to $14,187 range for:
-- Serious violations with moderate injury probability
-- Limited employee exposure to hazards
-- Some effort made toward compliance
+<Callout type="warning">
+  <h4 style="color: #92400e">🟡 Moderate Gravity Violations - $9,457 to $14,187</h4>
+  <ul style="color: #92400e">
+    <li><strong>Moderate injury probability</strong> violations</li>
+    <li><strong>Limited employee exposure</strong> to hazards</li>
+    <li><strong>Some compliance effort</strong> demonstrated</li>
+  </ul>
+</Callout>
 
-**Low Gravity Violations**: $7,093 base amount for:
-- Minor violations with low injury probability
-- Single employee exposure scenarios
-- Good faith effort toward compliance demonstrated
+<Callout type="info">
+  <h4 style="text-shadow: 0 0 3px rgba(0,0,0,0.8), 0 1px 4px rgba(0,0,0,0.6), 1px 1px 0 rgba(0,0,0,0.8), -1px -1px 0 rgba(0,0,0,0.8), 1px -1px 0 rgba(0,0,0,0.8), -1px 1px 0 rgba(0,0,0,0.8)">🟢 Low Gravity Violations - $7,093 Base</h4>
+  <ul style="text-shadow: 0 0 3px rgba(0,0,0,0.8), 0 1px 4px rgba(0,0,0,0.6), 1px 1px 0 rgba(0,0,0,0.8), -1px -1px 0 rgba(0,0,0,0.8), 1px -1px 0 rgba(0,0,0,0.8), -1px 1px 0 rgba(0,0,0,0.8)">
+    <li><strong>Low injury probability</strong> violations</li>
+    <li><strong>Single employee exposure</strong> scenarios</li>
+    <li><strong>Good faith effort</strong> toward compliance demonstrated</li>
+  </ul>
+</Callout>
 
 ### Recent Enforcement Examples and Trends
 
@@ -367,46 +504,71 @@ Understanding OSHA's current penalty structure helps illustrate the financial im
 - Power line safety procedures and implementation
 - Equipment inspection and maintenance program adequacy
 
+---
+
 ## Insurance Implications of OSHA Compliance
 
-<div className="quick-answer" itemScope itemType="https://schema.org/Question">
-  <h3 itemProp="name" className="text-lg font-bold mb-2">How Do OSHA Violations Affect Insurance Coverage?</h3>
-  <div itemProp="acceptedAnswer" itemScope itemType="https://schema.org/Answer">
-    <div itemProp="text">
-      OSHA violations can significantly impact insurance: claims may be denied if violations contributed to incidents, premiums increase 15-50% after serious violations, coverage may be cancelled for repeated violations, and deductibles often increase. Maintaining OSHA compliance typically qualifies for 5-15% premium discounts and ensures full coverage during claims.
-    </div>
-  </div>
-</div>
+<Callout type="warning">
+  <h3 style="color: #92400e">💼 How Do OSHA Violations Affect Insurance Coverage?</h3>
+  <p style="color: #92400e">OSHA violations can significantly impact insurance: claims may be denied if violations contributed to incidents, premiums increase 15-50% after serious violations, coverage may be cancelled for repeated violations, and deductibles often increase. Maintaining OSHA compliance typically qualifies for 5-15% premium discounts and ensures full coverage during claims.</p>
+</Callout>
 
 The relationship between OSHA compliance and insurance coverage represents one of the most critical aspects of construction risk management, with violations creating both immediate and long-term financial consequences.
 
 ### Premium Impact Mechanisms
 
-**Experience Modification Rate (EMR) Effects**:
-OSHA violations directly impact EMR calculations, which determine workers' compensation premiums:
-- **Basic Violations**: 15% average premium increase
-- **Multiple Violations**: 20%+ premium increases common
-- **Willful Violations**: Can trigger complete re-underwriting or coverage exclusions
-- **Duration**: Premium impacts persist for three consecutive policy years
+<Stats
+  stats={[
+    { value: "15%", label: "Basic Violations", description: "Average premium increase" },
+    { value: "20%+", label: "Multiple Violations", description: "Common premium increases" },
+    { value: "3 Years", label: "Duration", description: "Premium impact period" },
+    { value: "Complete Loss", label: "Willful Violations", description: "Potential coverage exclusion" }
+  ]}
+/>
 
-**Specific Examples of Premium Impact**:
-- Single serious violation: $16,550 penalty + 15% premium increase
-- Multiple violations: $50,000+ penalties + 25% premium increases
-- Willful violations: $165,514 penalties + potential coverage loss
+<Callout type="info">
+  <h4 style="text-shadow: 0 0 3px rgba(0,0,0,0.8), 0 1px 4px rgba(0,0,0,0.6), 1px 1px 0 rgba(0,0,0,0.8), -1px -1px 0 rgba(0,0,0,0.8), 1px -1px 0 rgba(0,0,0,0.8), -1px 1px 0 rgba(0,0,0,0.8)">📊 Experience Modification Rate (EMR) Effects</h4>
+  <p style="text-shadow: 0 0 3px rgba(0,0,0,0.8), 0 1px 4px rgba(0,0,0,0.6), 1px 1px 0 rgba(0,0,0,0.8), -1px -1px 0 rgba(0,0,0,0.8), 1px -1px 0 rgba(0,0,0,0.8), -1px 1px 0 rgba(0,0,0,0.8)">OSHA violations directly impact EMR calculations, which determine workers' compensation premiums:</p>
+  <ul style="text-shadow: 0 0 3px rgba(0,0,0,0.8), 0 1px 4px rgba(0,0,0,0.6), 1px 1px 0 rgba(0,0,0,0.8), -1px -1px 0 rgba(0,0,0,0.8), 1px -1px 0 rgba(0,0,0,0.8), -1px 1px 0 rgba(0,0,0,0.8)">
+    <li><strong>Basic Violations</strong> - 15% average premium increase</li>
+    <li><strong>Multiple Violations</strong> - 20%+ premium increases common</li>
+    <li><strong>Willful Violations</strong> - Complete re-underwriting or coverage exclusions</li>
+    <li><strong>Duration</strong> - Premium impacts persist for three consecutive policy years</li>
+  </ul>
+</Callout>
+
+<Callout type="warning">
+  <h4 style="color: #92400e">💸 Real-World Premium Impact Examples</h4>
+  <ul style="color: #92400e">
+    <li><strong>Single serious violation:</strong> $16,550 penalty + 15% premium increase</li>
+    <li><strong>Multiple violations:</strong> $50,000+ penalties + 25% premium increases</li>
+    <li><strong>Willful violations:</strong> $165,514 penalties + potential coverage loss</li>
+  </ul>
+</Callout>
 
 ### Total Cost Analysis Beyond Penalties
 
-**Direct Costs**: OSHA penalties represent only the beginning of violation-related expenses:
-- Penalty amounts: $16,550 to $165,514 per violation
-- Legal and administrative costs: $10,000 to $50,000+ per case
-- Work stoppage costs: Lost revenue during correction periods
-- Corrective action implementation: Equipment and procedural modifications
+<Callout type="warning">
+  <h4 style="color: #92400e">💵 Direct Costs</h4>
+  <p style="color: #92400e">OSHA penalties represent only the beginning of violation-related expenses:</p>
+  <ul style="color: #92400e">
+    <li><strong>Penalty amounts:</strong> $16,550 to $165,514 per violation</li>
+    <li><strong>Legal/administrative:</strong> $10,000 to $50,000+ per case</li>
+    <li><strong>Work stoppage:</strong> Lost revenue during correction periods</li>
+    <li><strong>Corrective actions:</strong> Equipment and procedural modifications</li>
+  </ul>
+</Callout>
 
-**Indirect Costs**: Often exceed direct penalty amounts by 3-5 times:
-- Increased insurance premiums over three-year periods
-- Lost business opportunities due to safety record concerns
-- Employee morale and recruitment challenges
-- Potential customer contract exclusions
+<Callout type="warning">
+  <h4 style="color: #92400e">📈 Indirect Costs (3-5x Direct Costs)</h4>
+  <p style="color: #92400e">Often exceed direct penalty amounts by 3-5 times:</p>
+  <ul style="color: #92400e">
+    <li><strong>Premium increases</strong> - Over three-year periods</li>
+    <li><strong>Lost opportunities</strong> - Due to safety record concerns</li>
+    <li><strong>Employee issues</strong> - Morale and recruitment challenges</li>
+    <li><strong>Contract exclusions</strong> - Customer requirements not met</li>
+  </ul>
+</Callout>
 
 ### Coverage Implications and Underwriting
 
@@ -436,25 +598,33 @@ OSHA violations directly impact EMR calculations, which determine workers' compe
 - Predictive maintenance programs
 - Real-time hazard detection and response
 
+---
+
 ## Compliance Best Practices and Implementation
 
 Developing and maintaining effective OSHA compliance programs protects both worker safety and business financial interests while supporting favorable insurance coverage terms.
 
 ### Comprehensive Safety Program Development
 
-**Written Safety Program Components**:
-- Clear policy statements and management commitment
-- Hazard identification and assessment procedures
-- Employee training programs and documentation systems
-- Incident investigation and corrective action procedures
-- Regular program evaluation and improvement processes
+<Callout type="success">
+  <h4 style="text-shadow: 0 0 3px rgba(0,0,0,0.8), 0 1px 4px rgba(0,0,0,0.6), 1px 1px 0 rgba(0,0,0,0.8), -1px -1px 0 rgba(0,0,0,0.8), 1px -1px 0 rgba(0,0,0,0.8), -1px 1px 0 rgba(0,0,0,0.8)">📋 Written Safety Program Components</h4>
+  <ul style="text-shadow: 0 0 3px rgba(0,0,0,0.8), 0 1px 4px rgba(0,0,0,0.6), 1px 1px 0 rgba(0,0,0,0.8), -1px -1px 0 rgba(0,0,0,0.8), 1px -1px 0 rgba(0,0,0,0.8), -1px 1px 0 rgba(0,0,0,0.8)">
+    <li><strong>Policy statements</strong> - Clear management commitment</li>
+    <li><strong>Hazard procedures</strong> - Identification and assessment systems</li>
+    <li><strong>Training programs</strong> - Employee education and documentation</li>
+    <li><strong>Incident investigation</strong> - Corrective action procedures</li>
+    <li><strong>Program evaluation</strong> - Regular improvement processes</li>
+  </ul>
+</Callout>
 
-**Key Program Elements**:
-- **Management Leadership**: Visible commitment and resource allocation
-- **Employee Participation**: Worker involvement in safety program development
-- **Hazard Assessment**: Systematic identification and evaluation procedures
-- **Training Programs**: Comprehensive education for all personnel levels
-- **Performance Measurement**: Regular assessment and improvement processes
+<Stats
+  stats={[
+    { value: "Management", label: "Leadership", description: "Visible commitment & resources" },
+    { value: "Employee", label: "Participation", description: "Worker involvement required" },
+    { value: "Hazard", label: "Assessment", description: "Systematic identification" },
+    { value: "Performance", label: "Measurement", description: "Regular improvement" }
+  ]}
+/>
 
 ### Training Program Development and Implementation
 
@@ -503,6 +673,8 @@ Developing and maintaining effective OSHA compliance programs protects both work
 - Preparation for potential OSHA inspections
 - Benchmarking against industry best practices
 
+---
+
 ## Technology and Future Regulatory Trends
 
 Understanding emerging trends in crane safety technology and potential regulatory evolution helps companies prepare for future compliance requirements while maintaining competitive advantages.
@@ -535,16 +707,24 @@ Understanding emerging trends in crane safety technology and potential regulator
 - Sustainable operation practice requirements
 - Integration with broader construction sustainability initiatives
 
+---
+
 ## Frequently Asked Questions
 
-**Q: What are the current OSHA penalty amounts for crane violations in 2025?**
-A: Serious violations can result in penalties up to $16,550 per violation, while willful or repeated violations can reach $165,514 per violation. These amounts represent a 2.6% increase from 2024 levels.
+<Callout type="info">
+  <h4 style="text-shadow: 0 0 3px rgba(0,0,0,0.8), 0 1px 4px rgba(0,0,0,0.6), 1px 1px 0 rgba(0,0,0,0.8), -1px -1px 0 rgba(0,0,0,0.8), 1px -1px 0 rgba(0,0,0,0.8), -1px 1px 0 rgba(0,0,0,0.8)">❓ What are the current OSHA penalty amounts for crane violations in 2025?</h4>
+  <p style="text-shadow: 0 0 3px rgba(0,0,0,0.8), 0 1px 4px rgba(0,0,0,0.6), 1px 1px 0 rgba(0,0,0,0.8), -1px -1px 0 rgba(0,0,0,0.8), 1px -1px 0 rgba(0,0,0,0.8), -1px 1px 0 rgba(0,0,0,0.8)">Serious violations can result in penalties up to <strong>$16,550 per violation</strong>, while willful or repeated violations can reach <strong>$165,514 per violation</strong>. These amounts represent a 2.6% increase from 2024 levels.</p>
+</Callout>
 
-**Q: How long are NCCCO certifications valid, and what are recertification requirements?**
-A: NCCCO certifications are valid for five years from the issue date. Recertification requires completing continuing education credits and passing renewal examinations before the expiration date.
+<Callout type="tip">
+  <h4 style="text-shadow: 0 0 3px rgba(0,0,0,0.8), 0 1px 4px rgba(0,0,0,0.6), 1px 1px 0 rgba(0,0,0,0.8), -1px -1px 0 rgba(0,0,0,0.8), 1px -1px 0 rgba(0,0,0,0.8), -1px 1px 0 rgba(0,0,0,0.8)">❓ How long are NCCCO certifications valid, and what are recertification requirements?</h4>
+  <p style="text-shadow: 0 0 3px rgba(0,0,0,0.8), 0 1px 4px rgba(0,0,0,0.6), 1px 1px 0 rgba(0,0,0,0.8), -1px -1px 0 rgba(0,0,0,0.8), 1px -1px 0 rgba(0,0,0,0.8), -1px 1px 0 rgba(0,0,0,0.8)">NCCCO certifications are valid for <strong>five years</strong> from the issue date. Recertification requires completing continuing education credits and passing renewal examinations before the expiration date.</p>
+</Callout>
 
-**Q: Do OSHA violations automatically void my insurance coverage?**
-A: Not automatically, but OSHA violations can significantly impact coverage. Violations may increase premiums, trigger policy exclusions, or result in claim denials if violations contributed to incidents.
+<Callout type="warning">
+  <h4 style="color: #92400e">❓ Do OSHA violations automatically void my insurance coverage?</h4>
+  <p style="color: #92400e">Not automatically, but OSHA violations can significantly impact coverage. Violations may increase premiums, trigger policy exclusions, or result in claim denials if violations contributed to incidents.</p>
+</Callout>
 
 **Q: What documentation must be available on-site for OSHA compliance?**
 A: Required documentation includes operator certifications, daily inspection records, equipment load charts, maintenance records, and training documentation. All records must be current and easily accessible.
@@ -581,6 +761,8 @@ A: Cooperate fully with the inspection, designate a knowledgeable representative
 
 **Q: Can state regulations be more stringent than federal OSHA crane requirements?**
 A: Yes, states can implement more restrictive regulations than federal OSHA standards. Sixteen states currently have additional crane operator licensing requirements beyond federal minimums.
+
+---
 
 ## Conclusion: Building a Culture of Compliance and Safety
 

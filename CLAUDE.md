@@ -105,6 +105,30 @@ import { Table, TableHead, TableBody, TableRow, TableCell, TableHeaderCell } fro
 3. **MANDATORY**: Verify article online at live URL before completion
 4. All internal/external links must be tested and functional
 
+### 7. Blog Component Styling Standards
+**Text Readability Requirements**: All text on colored backgrounds MUST include text shadows for legibility.
+
+**Callout Component Text Shadows**:
+- **Dark backgrounds** (info, tip, success): Use black text shadows on white text
+- **Light backgrounds** (warning/yellow): Use white text shadows on dark text
+- **Text shadow CSS**: `text-shadow: '0 0 3px rgba(0,0,0,0.8), 0 1px 4px rgba(0,0,0,0.6), 1px 1px 0 rgba(0,0,0,0.8), -1px -1px 0 rgba(0,0,0,0.8), 1px -1px 0 rgba(0,0,0,0.8), -1px 1px 0 rgba(0,0,0,0.8)'`
+
+**Stats Component Text Shadows**:
+- All text elements (titles, values, labels, descriptions) use black text shadows
+- Applied via inline styles for precise control
+- Consistent with Callout component styling
+
+**Implementation Method**:
+- Use inline `style` attributes for text-shadow properties
+- Apply to ALL text elements within colored containers
+- Maintain consistency across all blog components
+- Follow CLAUDE.md critical text styling guidelines
+
+**Supported Component Types**:
+- ✅ `Callout` - info, warning, tip, success (all with proper text shadows)
+- ✅ `Stats` - statistical display blocks (all text with shadows)
+- ✅ Import paths: Use `@components` not `@/components`
+
 ## Architecture Guidelines
 
 ### Component Structure

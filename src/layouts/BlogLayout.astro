@@ -8,12 +8,97 @@ export interface Props {
   pubDate: Date;
   author?: string;
   tags?: string[];
+  image?: string;
+  readTime?: string;
+  schema?: {
+    type?: string;
+    faq?: Array<{
+      question: string;
+      answer: string;
+    }>;
+  };
 }
 
-const { title, description, pubDate, author = 'Comfort Insulation Team', tags = [] } = Astro.props;
+const { 
+  title, 
+  description, 
+  pubDate, 
+  author = 'Heavy Crane Insurance Team', 
+  tags = [],
+  image = '/images/crane-insurance-default.jpg',
+  readTime = '5 min read',
+  schema
+} = Astro.props;
+
+const currentUrl = Astro.url.href;
+const publishedDate = new Date(pubDate).toISOString();
+
+// Generate structured data for the article
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": title,
+  "description": description,
+  "image": `https://heavycraneinsurance.com${image}`,
+  "datePublished": publishedDate,
+  "dateModified": publishedDate,
+  "author": {
+    "@type": "Organization",
+    "name": author,
+    "url": "https://heavycraneinsurance.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Heavy Crane Insurance",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://heavycraneinsurance.com/logo.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": currentUrl
+  },
+  "articleSection": "Crane Insurance",
+  "keywords": tags.join(', '),
+  "wordCount": "5000",
+  "timeRequired": readTime
+};
+
+// Generate FAQ schema if provided
+const faqSchema = schema?.faq ? {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": schema.faq.map(item => ({
+    "@type": "Question",
+    "name": item.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": item.answer
+    }
+  }))
+} : null;
 ---
 
-<BaseLayout title={title} description={description}>
+<BaseLayout title={title} description={description} ogImage={image}>
+  <!-- Enhanced Schema.org Structured Data for Articles -->
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+  
+  {faqSchema && (
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+  )}
+  
+  <!-- Additional Meta Tags for Better SEO -->
+  <meta name="article:published_time" content={publishedDate} slot="head" />
+  <meta name="article:author" content={author} slot="head" />
+  <meta name="article:section" content="Insurance" slot="head" />
+  {tags.map(tag => <meta name="article:tag" content={tag} slot="head" />)}
+  
+  <!-- Twitter Card Enhancements -->
+  <meta name="twitter:label1" content="Reading time" slot="head" />
+  <meta name="twitter:data1" content={readTime} slot="head" />
+  <meta name="twitter:label2" content="Written by" slot="head" />
+  <meta name="twitter:data2" content={author} slot="head" />
   <article class="min-h-screen pt-32 pb-16 bg-light-gray">
     <div class="container-padding max-w-4xl mx-auto">
       <!-- Blog Header -->

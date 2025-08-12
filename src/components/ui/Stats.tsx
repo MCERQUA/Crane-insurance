@@ -18,7 +18,7 @@ export const Stats: React.FC<StatsProps> = ({ title, stats, className = '' }) =>
       {title && (
         <h3 className="text-xl font-bold text-construction-yellow mb-6 text-center"
             style={{
-              textShadow: '0 0 3px rgba(0, 0, 0, 0.8), 0 1px 4px rgba(0, 0, 0, 0.6), 1px 1px 0 rgba(0, 0, 0, 0.8), -1px -1px 0 rgba(0, 0, 0, 0.8), 1px -1px 0 rgba(0, 0, 0, 0.8), -1px 1px 0 rgba(0, 0, 0, 0.8)'
+              textShadow: '0 1px 2px rgba(0, 0, 0, 0.3)'
             }}>
           {title}
         </h3>
@@ -31,20 +31,20 @@ export const Stats: React.FC<StatsProps> = ({ title, stats, className = '' }) =>
           >
             <div className="text-3xl font-bold text-construction-yellow mb-2"
                  style={{
-                   textShadow: '0 0 3px rgba(0, 0, 0, 0.8), 0 1px 4px rgba(0, 0, 0, 0.6), 1px 1px 0 rgba(0, 0, 0, 0.8), -1px -1px 0 rgba(0, 0, 0, 0.8), 1px -1px 0 rgba(0, 0, 0, 0.8), -1px 1px 0 rgba(0, 0, 0, 0.8)'
+                   textShadow: '0 1px 2px rgba(0, 0, 0, 0.3)'
                  }}>
               {stat.value}
             </div>
             <div className="text-aluminum font-medium mb-1"
                  style={{
-                   textShadow: '0 0 3px rgba(0, 0, 0, 0.8), 0 1px 4px rgba(0, 0, 0, 0.6), 1px 1px 0 rgba(0, 0, 0, 0.8), -1px -1px 0 rgba(0, 0, 0, 0.8), 1px -1px 0 rgba(0, 0, 0, 0.8), -1px 1px 0 rgba(0, 0, 0, 0.8)'
+                   textShadow: '0 1px 2px rgba(0, 0, 0, 0.3)'
                  }}>
               {stat.label}
             </div>
             {stat.description && (
               <div className="text-sm text-aluminum/70"
                    style={{
-                     textShadow: '0 0 3px rgba(0, 0, 0, 0.8), 0 1px 4px rgba(0, 0, 0, 0.6), 1px 1px 0 rgba(0, 0, 0, 0.8), -1px -1px 0 rgba(0, 0, 0, 0.8), 1px -1px 0 rgba(0, 0, 0, 0.8), -1px 1px 0 rgba(0, 0, 0, 0.8)'
+                     textShadow: '0 1px 2px rgba(0, 0, 0, 0.3)'
                    }}>
                 {stat.description}
               </div>

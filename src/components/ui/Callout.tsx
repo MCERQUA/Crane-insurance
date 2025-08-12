@@ -61,13 +61,18 @@ export const Callout: React.FC<CalloutProps> = ({
         </div>
         <div className="space-y-2">
           {title && (
-            <h4 className={`font-bold text-lg ${textShadow}`}>{title}</h4>
+            <h4 className={`font-bold text-lg ${textShadow}`}
+                style={{
+                  textShadow: type === 'warning' 
+                    ? '0 1px 2px rgba(255, 255, 255, 0.4)'
+                    : '0 1px 2px rgba(0, 0, 0, 0.3)'
+                }}>{title}</h4>
           )}
           <div className={`prose prose-sm max-w-none ${textShadow}`}
                style={{
                  textShadow: type === 'warning' 
-                   ? '0 0 3px rgba(255, 255, 255, 0.8), 0 1px 4px rgba(255, 255, 255, 0.6), 1px 1px 0 rgba(255, 255, 255, 0.8), -1px -1px 0 rgba(255, 255, 255, 0.8), 1px -1px 0 rgba(255, 255, 255, 0.8), -1px 1px 0 rgba(255, 255, 255, 0.8)'
-                   : '0 0 3px rgba(0, 0, 0, 0.8), 0 1px 4px rgba(0, 0, 0, 0.6), 1px 1px 0 rgba(0, 0, 0, 0.8), -1px -1px 0 rgba(0, 0, 0, 0.8), 1px -1px 0 rgba(0, 0, 0, 0.8), -1px 1px 0 rgba(0, 0, 0, 0.8)'
+                   ? '0 1px 2px rgba(255, 255, 255, 0.4)'
+                   : '0 1px 2px rgba(0, 0, 0, 0.3)'
                }}>
             {children}
           </div>

@@ -151,6 +151,177 @@ body {
 /* Enhanced Blog Content Styling */
 .blog-content {
   font-family: 'Inter', sans-serif;
+  line-height: 1.7;
+  color: #8B7355; /* warm-gray */
+}
+
+/* Headings */
+.blog-content h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #3E2723; /* espresso */
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #C8B89E; /* sand */
+  padding-bottom: 1rem;
+}
+
+.blog-content h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #D2691E; /* terra-cotta */
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.blog-content h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #3E2723; /* espresso */
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.blog-content h4 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #3E2723; /* espresso */
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Paragraphs */
+.blog-content p {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #8B7355; /* warm-gray */
+}
+
+/* Links */
+.blog-content a {
+  color: #D2691E; /* terra-cotta */
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.2s ease;
+}
+
+.blog-content a:hover {
+  color: #B8561A; /* darker terra-cotta */
+}
+
+/* Strong/Bold text */
+.blog-content strong, .blog-content b {
+  font-weight: 600;
+  color: #3E2723; /* espresso */
+}
+
+/* Lists */
+.blog-content ul, .blog-content ol {
+  margin: 1.5rem 0;
+  padding-left: 0;
+}
+
+.blog-content ul li {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 0.5rem;
+  color: #8B7355; /* warm-gray */
+  line-height: 1.6;
+}
+
+.blog-content ul li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: #D2691E; /* terra-cotta */
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.blog-content ol li {
+  counter-increment: list-counter;
+  position: relative;
+  padding-left: 3rem;
+  margin-bottom: 0.5rem;
+  color: #8B7355; /* warm-gray */
+  line-height: 1.6;
+}
+
+.blog-content ol {
+  counter-reset: list-counter;
+}
+
+.blog-content ol li::before {
+  content: counter(list-counter);
+  position: absolute;
+  left: 0;
+  top: 0.125rem;
+  width: 2rem;
+  height: 2rem;
+  background: #D2691E; /* terra-cotta */
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.875rem;
+}
+
+/* Blockquotes */
+.blog-content blockquote {
+  border-left: 4px solid #D2691E; /* terra-cotta */
+  padding: 1rem 0 1rem 1.5rem;
+  margin: 2rem 0;
+  background-color: rgba(250, 247, 242, 0.5); /* cream/50 */
+  font-style: italic;
+  color: #8B7355; /* warm-gray */
+}
+
+/* Code */
+.blog-content code {
+  background-color: #FAF7F2; /* cream */
+  color: #D2691E; /* terra-cotta */
+  padding: 0.125rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+}
+
+/* Horizontal rules */
+.blog-content hr {
+  border: none;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #C8B89E, transparent); /* sand */
+  margin: 3rem 0;
+}
+
+/* Tables */
+.blog-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  border: 1px solid #C8B89E; /* sand */
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.blog-content th {
+  background-color: #FAF7F2; /* cream */
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: #3E2723; /* espresso */
+}
+
+.blog-content td {
+  padding: 1rem;
+  border-top: 1px solid #C8B89E; /* sand */
+  color: #8B7355; /* warm-gray */
+}
+
+.blog-content tbody tr:nth-child(even) {
+  background-color: rgba(250, 247, 242, 0.3); /* cream/30 */
 }
 
 /* Quick Answer Boxes */
